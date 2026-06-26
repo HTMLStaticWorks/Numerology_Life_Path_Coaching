@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths (none for this static site)
+# Disallow: /admin/
+
+Sitemap: https://numerosoul.com/sitemap.xml

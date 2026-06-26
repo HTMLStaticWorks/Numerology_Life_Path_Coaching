@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#8B5CF6" />
+  <meta name="author" content="NumeroSoul" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gallery - NumeroSoul" />
+  <meta property="og:description" content="Gallery" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://numerosoul.com/gallery.html" />
+  <meta property="og:image" content="assets/images/logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery - NumeroSoul" />
+  <meta name="twitter:description" content="Gallery" />
+
+  <title>Gallery - NumeroSoul</title>
+  <link rel="canonical" href="https://numerosoul.com/gallery.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="alternate icon" href="assets/images/favicon.ico" />
+
+  <!-- Resource Hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="preload" as="style" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;450;480;500;510;520;540;560;580&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  
+
+  <!-- Inline theme pre-apply -->
+  <script>
+  (function(){
+    const t=localStorage.getItem('ns-theme');
+    const r=localStorage.getItem('ns-rtl');
+    if(t) document.documentElement.setAttribute('data-theme',t);
+    if(r==='true') document.documentElement.setAttribute('dir','rtl');
+  })();
+  </script>
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <nav id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="container d-flex align-items-center justify-content-between" style="height: var(--nav-height);">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar-brand p-0 me-4" aria-label="NumeroSoul Home">
+        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="desktop-nav d-flex align-items-center gap-1 mb-0 me-auto" role="list">
+        <li><a href="index.html" class="nav-link-custom">Home</a></li>
+        <li><a href="home-2.html" class="nav-link-custom">Home2</a></li>
+        <li><a href="about.html" class="nav-link-custom">About</a></li>
+        <li><a href="services.html" class="nav-link-custom">Services</a></li>
+        <li><a href="blog.html" class="nav-link-custom">Blog</a></li>
+        <li><a href="gallery.html" class="nav-link-custom active" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop">🌙</button>
+        <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL" id="rtlToggleDesktop">RTL</button>
+        <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn" style="font-size:0.9rem;padding:0.55rem 1.25rem;">
+          <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login
+        </a>
+        <button class="navbar-toggler-custom mobile-nav-toggle"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu"
+                aria-label="Open navigation menu"
+                id="mobileMenuBtn">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom" style="border-color: var(--border) !important;">
+      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160" style="max-width:160px;object-fit:contain;" loading="lazy" />
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"
+              style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="mb-0" role="list">
+        <li><a href="index.html" class="offcanvas-nav-link">🏠 Home</a></li>
+        <li><a href="home-2.html" class="offcanvas-nav-link">🏠 Home2</a></li>
+        <li><a href="about.html" class="offcanvas-nav-link">👥 About</a></li>
+        <li><a href="services.html" class="offcanvas-nav-link">✨ Services</a></li>
+        <li><a href="blog.html" class="offcanvas-nav-link">📰 Blog</a></li>
+        <li><a href="gallery.html" class="offcanvas-nav-link active" aria-current="page">🖼️ Gallery</a></li>
+        <li><a href="contact.html" class="offcanvas-nav-link">📬 Contact</a></li>
+        
+      </ul>
+      <div class="d-flex flex-column gap-2 mt-4 pb-2">
+        <div class="d-flex gap-2">
+          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile">🌙</button>
+          <button class="nav-toggle-btn flex-fill" data-rtl-toggle id="rtlToggleMobile">RTL</button>
+        </div>
+        <a href="login.html" class="btn-primary-custom text-center justify-content-center">
+          <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login
+        </a>
+      </div>
+    </div>
+  </div>
+  <main id="main-content" role="main">
+
+  <!-- ============================================================
+       PAGE HERO / BANNER
+       ============================================================ -->
+  <section class="page-hero" aria-label="Page header">
+    <div class="page-hero-bg-orb page-hero-bg-orb-1" aria-hidden="true"></div>
+    <div class="page-hero-bg-orb page-hero-bg-orb-2" aria-hidden="true"></div>
+    <div class="container position-relative" style="z-index:2;">
+      <div class="page-hero-content text-center">
+        
+        <h1 class="page-hero-title animate-up">Gallery</h1>
+        <p class="lead page-hero-subtitle animate-up delay-1">A glimpse into our sessions.</p>
+
+        <div class="d-flex justify-content-center gap-3 mt-4 animate-up delay-2">
+            <div class="text-center px-3 border-end border-secondary border-opacity-25">
+                <div class="fs-3 fw-bold text-primary">200+</div>
+                <div class="fs-sm text-muted">Moments Captured</div>
+            </div>
+            <div class="text-center px-3">
+                <div class="fs-3 fw-bold text-secondary">15+</div>
+                <div class="fs-sm text-muted">Global Retreats</div>
+            </div>
+        </div>
+        <div class="mt-4 animate-up delay-3">
+            <a href="https://instagram.com" target="_blank" class="btn-outline-primary-custom rounded-pill">
+                <i class="bi bi-instagram me-2"></i>Follow our Journey
+            </a>
+        </div>
+
+</div>
+    </div>
+  </section>
+<section class="section-pad">
+  <div class="container text-center">
+    <p>Gallery images coming soon.</p>
+  </div>
+</section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-top">
+
+        <!-- Brand Column -->
+        <div class="col-lg-4">
+          <div class="footer-logo mb-3">
+            <img src="assets/images/logo.svg" alt="NumeroSoul Logo" width="180" height="50" loading="lazy" />
+          </div>
+          <p class="footer-brief">
+            Unlocking the ancient wisdom of numbers to guide modern souls toward purpose, clarity, and cosmic alignment.
+          </p>
+          <div class="d-flex gap-3 mt-4 social-icons-row">
+            <a href="https://instagram.com/numerosoul" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com/numerosoul" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com/numerosoul" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/numerosoul" class="footer-social-link" aria-label="Twitter / X" target="_blank" rel="noopener">
+              <i class="bi bi-twitter-x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="blog.html" class="footer-link">Pricing</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-sm-6 col-lg-2">
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="home-2.html" class="footer-link">How It Works</a></li>
+            <li><a href="contact.html" class="footer-link">Book a Session</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-lg-4">
+          <h3 class="footer-heading">Stay Aligned</h3>
+          <p class="footer-brief">Receive cosmic insights, numerology tips, and exclusive offers.</p>
+          <!-- Mailchimp / ConvertKit placeholder -->
+          <!-- ACTION: Replace with Mailchimp embed or ConvertKit form URL -->
+          <form class="newsletter-form" id="footerNewsletter" novalidate aria-label="Newsletter signup">
+            <input
+              type="email"
+              class="newsletter-input"
+              placeholder="Your email address"
+              aria-label="Email address"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn-primary-custom newsletter-btn" aria-label="Subscribe to newsletter">
+              <i class="bi bi-send" aria-hidden="true"></i>
+            </button>
+          </form>
+          <p class="caption mt-2">No spam. Unsubscribe anytime.</p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright mb-0">
+          © <span id="footerYear">2026</span> NumeroSoul. All rights reserved.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+      <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+  <!-- Custom JS (ES6 module, deferred) -->
+  <script src="assets/js/main.js" type="module" defer></script>
+</body>
+</html>

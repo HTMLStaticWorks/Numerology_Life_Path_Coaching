@@ -1,0 +1,124 @@
+/* ============================================================
+   NumeroSoul — rtl.css
+   All [dir="rtl"] layout overrides.
+   Loaded alongside style.css on every page.
+   ============================================================ */
+
+/* ── Base direction ── */
+[dir="rtl"] body { text-align: right; }
+[dir="rtl"] .text-start { text-align: right !important; }
+[dir="rtl"] .text-md-start { text-align: right !important; }
+[dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
+[dir="rtl"] .me-auto { margin-right: 0 !important; margin-left: auto !important; }
+[dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+
+/* ── Navbar ── */
+[dir="rtl"] .desktop-nav { margin-left: auto; margin-right: 0; }
+[dir="rtl"] .navbar-brand { margin-right: 0; margin-left: 1.5rem; }
+[dir="rtl"] .offcanvas-start { left: auto; right: 0; }
+[dir="rtl"] .offcanvas-custom {
+  border-right: none !important;
+  border-left: 1px solid var(--border) !important;
+}
+
+/* ── Offcanvas nav links ── */
+[dir="rtl"] .offcanvas-nav-link:hover,
+[dir="rtl"] .offcanvas-nav-link.active {
+  padding-left: 1.2rem;
+  padding-right: 1.6rem;
+}
+
+/* ── Nav underline indicator ── */
+[dir="rtl"] .nav-link-custom::after {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* ── Skip link ── */
+[dir="rtl"] .skip-link { left: auto; right: 1rem; }
+
+/* ── Hero section ── */
+[dir="rtl"] #hero .text-lg-start { text-align: right !important; }
+[dir="rtl"] .justify-content-lg-start { justify-content: flex-end !important; }
+[dir="rtl"] .hero-floating-badge.badge-1 { right: auto; left: -20px; }
+[dir="rtl"] .hero-floating-badge.badge-2 { left: auto; right: -30px; }
+[dir="rtl"] .hero-floating-badge.badge-3 { right: auto; left: -30px; }
+
+/* ── Cards ── */
+[dir="rtl"] .card-custom { text-align: right; }
+[dir="rtl"] .card-icon { margin-right: 0; }
+[dir="rtl"] .d-flex { direction: rtl; }
+[dir="rtl"] .flex-row { flex-direction: row-reverse; }
+
+/* ── Blog card ── */
+[dir="rtl"] .blog-card-body { text-align: right; }
+[dir="rtl"] .blog-meta { flex-direction: row-reverse; }
+
+/* ── Breadcrumb ── */
+[dir="rtl"] .breadcrumb { flex-direction: row-reverse; }
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  content: "\\";
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+/* ── Form elements ── */
+[dir="rtl"] .calc-input,
+[dir="rtl"] .auth-input,
+[dir="rtl"] .newsletter-input { text-align: right; }
+[dir="rtl"] .field-error-msg { left: auto; right: 0; }
+[dir="rtl"] .field-error-msg::before { left: auto; right: 12px; }
+[dir="rtl"] .char-count { text-align: left; }
+
+/* ── Newsletter form ── */
+[dir="rtl"] .newsletter-form { flex-direction: row-reverse; }
+
+/* ── Calculator lead capture ── */
+[dir="rtl"] .calc-lead-capture { flex-direction: row-reverse; }
+
+/* ── Testimonial quote mark ── */
+[dir="rtl"] .testimonial-card::before { right: auto; left: 1.5rem; }
+
+/* ── Pricing check marks ── */
+[dir="rtl"] .pricing-feature { padding-left: 0; padding-right: 1.5rem; text-align: right; }
+[dir="rtl"] .pricing-feature::before { left: auto; right: 0; }
+
+/* ── FAQ ── */
+[dir="rtl"] .faq-question { text-align: right; }
+[dir="rtl"] .faq-icon { margin-left: 0; margin-right: auto; }
+
+/* ── Gallery filter ── */
+[dir="rtl"] .gallery-filters { flex-direction: row-reverse; }
+
+/* ── Footer ── */
+[dir="rtl"] .footer-brief { text-align: right; }
+[dir="rtl"] .footer-link { text-align: right; }
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-bottom-links { direction: rtl; }
+
+/* ── Back to top ── */
+[dir="rtl"] #backToTop { right: auto; left: 2rem; }
+
+/* ── Toast ── */
+[dir="rtl"] .toast-custom { right: auto; left: 2rem; }
+
+/* ── Page hero breadcrumb ── */
+[dir="rtl"] .page-hero-content { text-align: right; }
+
+/* ── Auth pages ── */
+[dir="rtl"] .auth-card { text-align: right; }
+[dir="rtl"] .auth-footer-row { flex-direction: row-reverse; }
+[dir="rtl"] .password-toggle { left: 0.875rem; right: auto; }
+
+/* ── Step numbers (services process) ── */
+[dir="rtl"] .process-connector { transform: scaleX(-1); }
+
+/* ── Social icons row ── */
+[dir="rtl"] .social-icons-row { flex-direction: row-reverse; }
+
+/* ── Booking form ── */
+[dir="rtl"] .booking-form-row { flex-direction: row-reverse; }
+
+/* ── Contact info ── */
+[dir="rtl"] .contact-info-item { flex-direction: row-reverse; text-align: right; }

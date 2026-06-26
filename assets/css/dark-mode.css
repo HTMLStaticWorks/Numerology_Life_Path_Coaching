@@ -1,0 +1,130 @@
+/* ============================================================
+   NumeroSoul — dark-mode.css
+   All [data-theme="dark"] overrides.
+   Loaded alongside style.css on every standard page.
+   ============================================================ */
+
+[data-theme="dark"] {
+  --bg:               #0F0F11;
+  --bg-card:          #1A1A1E;
+  --bg-alt:           #222228;
+  --surface:          #2A2A30;
+  --border:           rgba(139,92,246,0.20);
+  --text:             #F0EFFF;
+  --text-muted:       #9898B0;
+  --text-inverse:     #0F0F11;
+  --shadow:           0 4px 24px rgba(0,0,0,0.50);
+  --shadow-lg:        0 8px 48px rgba(0,0,0,0.65);
+  --glass:            rgba(26,26,30,0.88);
+  --glass-border:     rgba(139,92,246,0.22);
+}
+
+/* ── Navbar dark ── */
+[data-theme="dark"] #mainNav {
+  border-bottom-color: var(--glass-border);
+}
+[data-theme="dark"] #mainNav.scrolled {
+  background: var(--bg-card);
+}
+
+/* ── Offcanvas dark ── */
+[data-theme="dark"] .offcanvas-custom {
+  background: var(--bg-card) !important;
+}
+
+/* ── Cards dark ── */
+[data-theme="dark"] .card-custom,
+[data-theme="dark"] .report-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .calculator-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+/* ── Form inputs dark ── */
+[data-theme="dark"] .calc-input,
+[data-theme="dark"] .newsletter-input {
+  background: var(--bg-alt);
+  border-color: var(--border);
+  color: var(--text);
+}
+[data-theme="dark"] .calc-input::placeholder,
+[data-theme="dark"] .newsletter-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ── Auth pages dark ── */
+[data-theme="dark"] .auth-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+[data-theme="dark"] .auth-input {
+  background: var(--bg-alt);
+  border-color: var(--border);
+  color: var(--text);
+}
+[data-theme="dark"] .auth-input::placeholder { color: var(--text-muted); }
+[data-theme="dark"] .auth-divider-text { background: var(--bg-card); color: var(--text-muted); }
+[data-theme="dark"] .social-login-btn {
+  background: var(--bg-alt);
+  border-color: var(--border);
+  color: var(--text);
+}
+[data-theme="dark"] .social-login-btn:hover { background: var(--surface); }
+
+/* ── Page hero/banner dark ── */
+[data-theme="dark"] .page-hero {
+  background: linear-gradient(135deg, #0F0F11 0%, #1A1A1E 100%);
+}
+
+/* ── Blog cards dark ── */
+[data-theme="dark"] .blog-card { background: var(--bg-card); border-color: var(--border); }
+[data-theme="dark"] .blog-card-img-wrap { background: var(--bg-alt); }
+
+/* ── Pricing dark ── */
+[data-theme="dark"] .pricing-card { background: var(--bg-card); border-color: var(--border); }
+[data-theme="dark"] .pricing-card.popular { background: var(--primary); }
+[data-theme="dark"] .pricing-feature-divider { border-color: var(--border); }
+
+/* ── Gallery dark ── */
+[data-theme="dark"] .gallery-item-overlay { background: rgba(0,0,0,0.75); }
+
+/* ── Contact dark ── */
+[data-theme="dark"] .contact-info-card { background: var(--bg-card); border-color: var(--border); }
+[data-theme="dark"] .map-placeholder { background: var(--bg-alt); border-color: var(--border); }
+
+/* ── FAQ dark ── */
+[data-theme="dark"] .faq-item { background: var(--bg-card); border-color: var(--border); }
+[data-theme="dark"] .faq-question { color: var(--text); }
+
+/* ── Table dark ── */
+[data-theme="dark"] .compare-table th,
+[data-theme="dark"] .compare-table td {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+[data-theme="dark"] .compare-table thead th { background: var(--bg-alt); color: var(--text); }
+
+/* ── Toast dark ── */
+[data-theme="dark"] .toast-custom {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+/* ── Footer dark ── */
+[data-theme="dark"] #footer {
+  background: var(--bg-card);
+  border-top-color: var(--border);
+}
+[data-theme="dark"] .footer-link { color: var(--text-muted); }
+[data-theme="dark"] .footer-copyright { color: var(--text-muted); }
+
+/* ── Nav toggle dark ── */
+[data-theme="dark"] .nav-toggle-btn {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* ── Scrollbar dark ── */
+[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--bg); }
