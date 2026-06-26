@@ -135,7 +135,7 @@
   <!-- ============================================================
        PAGE HERO / BANNER
        ============================================================ -->
-  <section class="page-hero" aria-label="Page header">
+  <section class="page-hero bg-about" aria-label="Page header">
     <div class="page-hero-bg-orb page-hero-bg-orb-1" aria-hidden="true"></div>
     <div class="page-hero-bg-orb page-hero-bg-orb-2" aria-hidden="true"></div>
     <div class="container position-relative" style="z-index:2;">
@@ -310,34 +310,175 @@
       <h2 class="mt-3 reveal">Browse by <span class="text-gradient">Category</span></h2>
     </div>
     
-    <div class="row g-4 justify-content-center">
-      <div class="col-6 col-md-3 reveal">
-        <a href="#" class="card-custom text-center p-4 h-100 d-block text-decoration-none hover-lift border-0 shadow-sm">
-          <div class="fs-1 mb-3 text-primary"><i class="bi bi-star"></i></div>
-          <h4 class="h5 mb-0 text-reset">Life Path</h4>
-        </a>
+    <!-- Category Tabs -->
+    <div class="row g-3 mb-5 justify-content-center" id="blog-category-tabs">
+      <div class="col-6 col-md-3">
+        <div class="card-custom text-center p-3 h-100 cursor-pointer blog-tab active" data-target="life-path" style="border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer;">
+          <i class="bi bi-star d-block mb-2" style="font-size: 2rem; color: #3b82f6;"></i>
+          <h4 class="h6 mb-0" style="color: #8b5cf6;">Life Path</h4>
+        </div>
       </div>
-      <div class="col-6 col-md-3 reveal delay-1">
-        <a href="#" class="card-custom text-center p-4 h-100 d-block text-decoration-none hover-lift border-0 shadow-sm">
-          <div class="fs-1 mb-3 text-primary"><i class="bi bi-heart"></i></div>
-          <h4 class="h5 mb-0 text-reset">Compatibility</h4>
-        </a>
+      <div class="col-6 col-md-3">
+        <div class="card-custom text-center p-3 h-100 cursor-pointer blog-tab" data-target="compatibility" style="border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer;">
+          <i class="bi bi-heart d-block mb-2" style="font-size: 2rem; color: #3b82f6;"></i>
+          <h4 class="h6 mb-0" style="color: #8b5cf6;">Compatibility</h4>
+        </div>
       </div>
-      <div class="col-6 col-md-3 reveal delay-2">
-        <a href="#" class="card-custom text-center p-4 h-100 d-block text-decoration-none hover-lift border-0 shadow-sm">
-          <div class="fs-1 mb-3 text-primary"><i class="bi bi-calendar-event"></i></div>
-          <h4 class="h5 mb-0 text-reset">Forecasts</h4>
-        </a>
+      <div class="col-6 col-md-3">
+        <div class="card-custom text-center p-3 h-100 cursor-pointer blog-tab" data-target="forecasts" style="border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer;">
+          <i class="bi bi-calendar3 d-block mb-2" style="font-size: 2rem; color: #3b82f6;"></i>
+          <h4 class="h6 mb-0" style="color: #8b5cf6;">Forecasts</h4>
+        </div>
       </div>
-      <div class="col-6 col-md-3 reveal delay-3">
-        <a href="#" class="card-custom text-center p-4 h-100 d-block text-decoration-none hover-lift border-0 shadow-sm">
-          <div class="fs-1 mb-3 text-primary"><i class="bi bi-magic"></i></div>
-          <h4 class="h5 mb-0 text-reset">Angel Numbers</h4>
-        </a>
+      <div class="col-6 col-md-3">
+        <div class="card-custom text-center p-3 h-100 cursor-pointer blog-tab" data-target="angel-numbers" style="border: 1px solid var(--border); transition: all 0.3s ease; cursor: pointer;">
+          <i class="bi bi-magic d-block mb-2" style="font-size: 2rem; color: #3b82f6;"></i>
+          <h4 class="h6 mb-0" style="color: #8b5cf6;">Angel Numbers</h4>
+        </div>
       </div>
     </div>
+
+    <!-- Content Area -->
+    <div class="blog-content-container">
+      <!-- Life Path Content -->
+      <div class="row g-4 blog-content active" id="blog-content-life-path">
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=600&q=80" alt="Life Path Number 1" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Life Path 1: The Leader</h5>
+              <p class="small text-muted mb-0">Learn about the pioneering spirit of number 1.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Life Path Number 7" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Life Path 7: The Seeker</h5>
+              <p class="small text-muted mb-0">Deep dive into the analytical mind of number 7.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compatibility Content -->
+      <div class="row g-4 blog-content d-none" id="blog-content-compatibility">
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://media.istockphoto.com/id/1458615593/photo/zodiac-wheel-astrology-and-couple-concept.jpg?s=1024x1024&w=is&k=20&c=lNuegB9GZmlQ2_9Rq-OV1Jbs3sWdOgrhAq9YMiypj7c=" alt="Romantic Compatibility" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Love & Numbers</h5>
+              <p class="small text-muted mb-0">How your Life Path affects your romantic relationships.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://thumbs.dreamstime.com/z/creativity-building-stars-illustration-ambition-engineers-glass-exterior-unique-star-creativity-building-stars-creativity-building-313772566.jpg" alt="Business Compatibility" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Business Synergies</h5>
+              <p class="small text-muted mb-0">Finding the perfect numerological match for business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecasts Content -->
+      <div class="row g-4 blog-content d-none" id="blog-content-forecasts">
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80" alt="Yearly Forecast" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">2027 Numerology</h5>
+              <p class="small text-muted mb-0">What the Universal Year 9 means for everyone.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://images.unsplash.com/photo-1532767153582-b1a0e5145009?w=600&q=80" alt="Personal Year" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Your Personal Year</h5>
+              <p class="small text-muted mb-0">How to calculate and plan for your upcoming cycles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Angel Numbers Content -->
+      <div class="row g-4 blog-content d-none" id="blog-content-angel-numbers">
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://images.stockcake.com/public/e/e/1/ee1e7f1b-6086-44cf-8a57-b4539f10e4ca_large/magical-floating-letters-stockcake.jpg" alt="1111 Meaning" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Seeing 1111?</h5>
+              <p class="small text-muted mb-0">The spiritual significance of repeating ones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-custom h-100 d-flex flex-row align-items-center p-3" style="border: 1px solid var(--border);">
+            <img src="https://images.nightcafe.studio/galleries/9BSQaQ8sOPxOsz1cXYL7/a_vibrant_highresolution_photograph_of--1--41fqy.jpg" alt="Synchronicities" class="rounded" style="width: 100px; height: 100px; object-fit: cover; margin-right: 15px;">
+            <div>
+              <h5 class="h6 mb-1">Angelic Guidance</h5>
+              <p class="small text-muted mb-0">How your spirit guides use numbers to communicate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
+
+<style>
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<!-- Script for Tab functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.blog-tab');
+    const contents = document.querySelectorAll('.blog-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.style.boxShadow = 'none';
+        });
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        tab.style.boxShadow = '0 10px 25px rgba(139, 92, 246, 0.15)';
+
+        // Hide all contents
+        contents.forEach(c => {
+          c.classList.add('d-none');
+          c.classList.remove('active');
+          c.style.animation = 'none';
+        });
+
+        // Show target content
+        const targetId = 'blog-content-' + tab.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.remove('d-none');
+          // trigger reflow
+          void targetContent.offsetWidth;
+          targetContent.classList.add('active');
+          // Add a simple fade-in effect
+          targetContent.style.animation = 'fadeSlideIn 0.5s ease forwards';
+        }
+      });
+    });
+  });
+</script>
 
 
 <!-- ============================================================

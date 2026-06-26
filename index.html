@@ -44,6 +44,18 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+
+  <!-- Inline theme pre-apply -->
+  <script>
+    (function () {
+      const t = localStorage.getItem('ns-theme');
+      const r = localStorage.getItem('ns-rtl');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      if (r === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    })();
+  </script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -162,44 +174,17 @@
     <div class="container position-relative h-100" style="z-index:2;">
       <div class="row align-items-center g-5 h-100">
 
-        <!-- Left: Text Content -->
-        <div class="col-lg-6 col-xl-5 text-center text-lg-start d-flex flex-column justify-content-center h-100">
-          <div>
-            <div class="section-badge animate-up delay-1 mb-2">✨ Ancient Wisdom · Modern Clarity</div>
-
-            <h1 class="mt-2 mb-3 animate-up delay-2">
-              Find Your
-              <span class="text-gradient d-block">Cosmic Blueprint</span>
-            </h1>
-
-            <p class="lead animate-up delay-3 mb-3" style="max-width:480px; margin: 0 auto 1rem;">
-              Numerology is the ancient science of numbers that reveals your soul's purpose, life challenges, and
-              highest potential. Your name and birthdate hold a unique cosmic code — let us decode it.
-            </p>
-
-            <!-- CTAs -->
-            <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap animate-up delay-5 mb-3">
-              <a href="#calculator" class="btn-primary-custom">
-                <i class="bi bi-calculator-fill"></i> Calculate My Number
-              </a>
-              <a href="#reports" class="btn-secondary-custom">
-                <i class="bi bi-file-earmark-text"></i> View Sample Reports
-              </a>
-            </div>
-
-
-          </div>
-        </div>
-
-        <!-- Right: Mandala Visual -->
-        <div class="col-lg-6 col-xl-7 d-flex justify-content-center animate-right delay-2 h-100 align-items-center">
-          <div class="hero-image-wrapper" style="width:480px;height:480px;max-width:100%;">
+        <!-- Left: Mandala Visual -->
+        <div class="col-12 col-lg-5 d-flex justify-content-center align-items-center mb-5 mb-lg-0">
+          <div class="hero-image-wrapper" style="width:100%;max-width:500px;aspect-ratio:1/1;">
             <div class="hero-image-ring hero-image-ring-3" aria-hidden="true"></div>
             <div class="hero-image-ring hero-image-ring-2" aria-hidden="true"></div>
             <div class="hero-image-ring hero-image-ring-1" aria-hidden="true"></div>
 
             <!-- Center Mandala -->
-            <div class="hero-mandala" role="img" aria-label="Numerology mandala">🔢</div>
+            <div class="hero-mandala" role="img" aria-label="Numerology mandala" style="overflow: hidden; padding: 0;">
+              <img src="assets/images/hero_mandala.png" alt="Numerology Mandala" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
 
             <!-- Floating Badges -->
             <div class="hero-floating-badge badge-1">
@@ -225,6 +210,29 @@
               align-items:center;
               justify-content:center;
             ">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text Content -->
+        <div class="col-12 col-lg-7 text-center d-flex flex-column justify-content-center h-100">
+          <div>
+            <div class="section-badge animate-up delay-1 mb-2" style="text-shadow: none;">✨ Ancient Wisdom · Modern Clarity</div>
+            <h1 class="mt-2 mb-3 animate-up delay-2">
+              Find Your<br />
+              <span class="text-gradient" style="text-shadow: none;">Cosmic Blueprint</span>
+            </h1>
+            <p class="lead max-w-600 mx-auto mt-3 animate-up delay-3">
+              Numerology is the ancient science of numbers that reveals your soul's purpose, life challenges, and highest potential. Your name and birthdate hold a unique cosmic code — let us decode it.
+            </p>
+            <!-- CTAs -->
+            <div class="d-flex gap-3 justify-content-center flex-wrap mt-4 animate-up delay-4">
+              <a href="#calculator" class="btn-primary-custom">
+                <i class="bi bi-calculator-fill"></i> Calculate My Number
+              </a>
+              <a href="#reports" class="btn-secondary-custom">
+                <i class="bi bi-file-earmark-text"></i> View Sample Reports
+              </a>
             </div>
           </div>
         </div>
@@ -769,16 +777,18 @@
       <div class="row g-4">
 
         <div class="col-md-6 col-lg-4 reveal">
-          <div class="testimonial-card">
-            <div class="star-rating mb-3">★★★★★</div>
+          <div class="testimonial-card d-flex flex-column h-100 text-center">
             <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;">
+              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
               "I was skeptical at first, but my numerology report was uncannily accurate. It described my inner
               struggles and gifts better than years of therapy ever did. The coaching sessions were truly
               transformational."
             </p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="testimonial-avatar">S</div>
+            <div class="mt-auto d-flex flex-column align-items-center gap-2">
+              <div class="star-rating">★★★★★</div>
+              <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
+                <img src="assets/images/testimonials/p1.png" alt="Sophia M." style="width:100%; height:100%; object-fit:cover;">
+              </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Sophia M.</div>
                 <div class="caption">Life Path 3 · Entrepreneur</div>
@@ -788,15 +798,16 @@
         </div>
 
         <div class="col-md-6 col-lg-4 reveal delay-1">
-          <div class="testimonial-card">
-            <div class="star-rating mb-3">★★★★★</div>
+          <div class="testimonial-card d-flex flex-column h-100 text-center">
             <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;">
+              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
               "Discovering I'm an 11 — a Master Number — completely shifted how I see my sensitivity and 'overthinking.'
               What I thought were weaknesses are actually my greatest spiritual gifts. Mind blown."
             </p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="testimonial-avatar" style="background:linear-gradient(135deg,var(--gold),var(--gold-dark));">R
+            <div class="mt-auto d-flex flex-column align-items-center gap-2">
+              <div class="star-rating">★★★★★</div>
+              <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
+                <img src="assets/images/testimonials/p2.png" alt="Rajan K." style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Rajan K.</div>
@@ -807,15 +818,17 @@
         </div>
 
         <div class="col-md-6 col-lg-4 reveal delay-2">
-          <div class="testimonial-card">
-            <div class="star-rating mb-3">★★★★★</div>
+          <div class="testimonial-card d-flex flex-column h-100 text-center">
             <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;">
+              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
               "The Personal Year number coaching was like having a cosmic calendar. I timed a major business launch
               using my numerology forecast and had the best year of my career. This is real."
             </p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="testimonial-avatar" style="background:linear-gradient(135deg,var(--cyan),#0891B2);">L</div>
+            <div class="mt-auto d-flex flex-column align-items-center gap-2">
+              <div class="star-rating">★★★★★</div>
+              <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
+                <img src="assets/images/testimonials/p3.png" alt="Luna C." style="width:100%; height:100%; object-fit:cover;">
+              </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Luna C.</div>
                 <div class="caption">Life Path 8 · Business Owner</div>
@@ -825,15 +838,17 @@
         </div>
 
         <div class="col-md-6 col-lg-4 reveal delay-3">
-          <div class="testimonial-card">
-            <div class="star-rating mb-3">★★★★★</div>
+          <div class="testimonial-card d-flex flex-column h-100 text-center">
             <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;">
+              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
               "I used the compatibility reading for my relationship. It helped us understand our differences so much
               better — we stopped fighting against each other and started working with our energies."
             </p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="testimonial-avatar" style="background:linear-gradient(135deg,#EC4899,#BE185D);">A</div>
+            <div class="mt-auto d-flex flex-column align-items-center gap-2">
+              <div class="star-rating">★★★★★</div>
+              <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
+                <img src="assets/images/testimonials/p4.png" alt="Amara J." style="width:100%; height:100%; object-fit:cover;">
+              </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Amara J.</div>
                 <div class="caption">Life Path 6 · Nurse</div>
@@ -843,15 +858,17 @@
         </div>
 
         <div class="col-md-6 col-lg-4 reveal delay-4">
-          <div class="testimonial-card">
-            <div class="star-rating mb-3">★★★★★</div>
+          <div class="testimonial-card d-flex flex-column h-100 text-center">
             <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;">
+              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
               "As a data scientist, I approached this analytically. After three months of tracking my Personal Year
               themes, the correlations are statistically hard to dismiss. My 7 year was intensely introspective."
             </p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="testimonial-avatar" style="background:linear-gradient(135deg,#059669,#065F46);">D</div>
+            <div class="mt-auto d-flex flex-column align-items-center gap-2">
+              <div class="star-rating">★★★★★</div>
+              <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
+                <img src="assets/images/testimonials/p5.png" alt="Dev P." style="width:100%; height:100%; object-fit:cover;">
+              </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Dev P.</div>
                 <div class="caption">Life Path 7 · Data Scientist</div>
@@ -861,15 +878,17 @@
         </div>
 
         <div class="col-md-6 col-lg-4 reveal delay-5">
-          <div class="testimonial-card">
-            <div class="star-rating mb-3">★★★★★</div>
+          <div class="testimonial-card d-flex flex-column h-100 text-center">
             <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;">
+              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
               "After my divorce, I was completely lost. My Life Path 2 reading showed me that my sensitivity was a gift,
               not a flaw. The coaching helped me rebuild my life with clarity and confidence."
             </p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="testimonial-avatar" style="background:linear-gradient(135deg,#7C3AED,#5B21B6);">N</div>
+            <div class="mt-auto d-flex flex-column align-items-center gap-2">
+              <div class="star-rating">★★★★★</div>
+              <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
+                <img src="assets/images/testimonials/p6.png" alt="Nadia W." style="width:100%; height:100%; object-fit:cover;">
+              </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Nadia W.</div>
                 <div class="caption">Life Path 2 · Teacher</div>

@@ -135,7 +135,7 @@
   <!-- ============================================================
        PAGE HERO / BANNER
        ============================================================ -->
-  <section class="page-hero" aria-label="Page header">
+  <section class="page-hero bg-about" aria-label="Page header">
     <div class="page-hero-bg-orb page-hero-bg-orb-1" aria-hidden="true"></div>
     <div class="page-hero-bg-orb page-hero-bg-orb-2" aria-hidden="true"></div>
     <div class="container position-relative" style="z-index:2;">
@@ -188,12 +188,19 @@
           </div>
         </div>
         <div class="col-lg-6 reveal delay-1">
-          <div style="background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(245,158,11,0.06));border:1px solid var(--border);border-radius:var(--radius-card);padding:3rem;text-align:center;">
-            <div style="font-size:6rem;margin-bottom:1rem;">🔮</div>
-            <blockquote style="font-size:1.15rem;font-weight:450;font-style:italic;color:var(--text-muted);margin:0;">
-              "Numbers are the universal language offered by the deity to humans as confirmation of the truth."
-            </blockquote>
-            <cite style="display:block;margin-top:1rem;font-size:0.85rem;color:var(--primary);font-weight:500;">— St. Augustine of Hippo</cite>
+          <div style="position:relative; overflow:hidden; border:1px solid var(--border); border-radius:var(--radius-card); padding:2rem 2rem 3rem; text-align:center; min-height: 480px; display:flex; flex-direction:column; justify-content:flex-end; align-items:center;">
+            <!-- Background Image -->
+            <img src="assets/images/founder.png" alt="Indian Numerology Wisdom" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;" />
+            <!-- Overlay -->
+            <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.3) 40%, rgba(15, 23, 42, 0.95) 90%); z-index:1;"></div>
+            
+            <!-- Content -->
+            <div style="position:relative; z-index:2; max-width: 500px;">
+              <blockquote style="font-size:1.35rem; font-weight:500; font-style:italic; color:#ffffff; margin:0; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
+                "Numbers are the universal language offered by the deity to humans as confirmation of the truth."
+              </blockquote>
+              <cite style="display:block; margin-top:1.5rem; font-size:1rem; color:var(--gold, #F59E0B); font-weight:600; letter-spacing: 0.5px;">— St. Augustine of Hippo</cite>
+            </div>
           </div>
         </div>
       </div>
@@ -213,7 +220,7 @@
       <div class="row g-4 justify-content-center">
         <div class="col-sm-6 col-lg-4 reveal">
           <div class="card-custom text-center">
-            <div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(245,158,11,0.1));display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 1.25rem;border:2px solid rgba(139,92,246,0.25);">🌟</div>
+            <img src="assets/images/testimonials/p1.png" alt="Aanya Sharma" style="width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto 1.25rem;border:2px solid rgba(139,92,246,0.25);display:block;">
             <h3 class="card-title-custom">Aanya Sharma</h3>
             <div class="section-badge mb-2" style="font-size:0.75rem;">Founder & Master Numerologist</div>
             <p class="card-text-custom">Pythagorean & Chaldean systems. 10+ years. Author of "Numbers That Heal."</p>
@@ -225,7 +232,7 @@
         </div>
         <div class="col-sm-6 col-lg-4 reveal delay-1">
           <div class="card-custom text-center">
-            <div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,rgba(245,158,11,0.15),rgba(139,92,246,0.1));display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 1.25rem;border:2px solid rgba(245,158,11,0.25);">🌙</div>
+            <img src="assets/images/testimonials/p4.png" alt="Rohan Mehra" style="width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto 1.25rem;border:2px solid rgba(245,158,11,0.25);display:block;">
             <h3 class="card-title-custom">Rohan Mehra</h3>
             <div class="section-badge section-badge-gold mb-2" style="font-size:0.75rem;">Senior Numerologist</div>
             <p class="card-text-custom">Relationship compatibility specialist. Vedic numerology background. 7 years practice.</p>
@@ -237,7 +244,7 @@
         </div>
         <div class="col-sm-6 col-lg-4 reveal delay-2">
           <div class="card-custom text-center">
-            <div style="width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(245,158,11,0.1));display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 1.25rem;border:2px solid rgba(139,92,246,0.25);">☀️</div>
+            <img src="assets/images/testimonials/p3.png" alt="Priya Nair" style="width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto 1.25rem;border:2px solid rgba(139,92,246,0.25);display:block;">
             <h3 class="card-title-custom">Priya Nair</h3>
             <div class="section-badge mb-2" style="font-size:0.75rem;">Numerology Coach</div>
             <p class="card-text-custom">Career & business numerology focus. Life Purpose coaching. Certified wellness guide.</p>
@@ -265,15 +272,15 @@
           <p class="mt-4"><strong>Mission:</strong> To make numerology accessible, practical, and transformative for every soul — regardless of background, belief, or experience level.</p>
           <div class="d-flex flex-column gap-3 mt-4">
             <div class="d-flex gap-3 align-items-start">
-              <div class="card-icon card-icon-purple" style="flex-shrink:0;margin-bottom:0;"><i class="bi bi-eye" aria-hidden="true"></i></div>
+              <div class="card-icon card-icon-purple" style="flex-shrink:0;margin:0;"><i class="bi bi-eye" aria-hidden="true"></i></div>
               <div><strong>Clarity Over Confusion</strong><p class="card-text-custom mb-0">We translate complex ancient systems into clear, actionable insights you can act on today.</p></div>
             </div>
             <div class="d-flex gap-3 align-items-start">
-              <div class="card-icon card-icon-gold" style="flex-shrink:0;margin-bottom:0;"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+              <div class="card-icon card-icon-gold" style="flex-shrink:0;margin:0;"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
               <div><strong>Integrity Above All</strong><p class="card-text-custom mb-0">We never oversell or make predictions. Numerology is a lens — not a prophecy.</p></div>
             </div>
             <div class="d-flex gap-3 align-items-start">
-              <div class="card-icon card-icon-purple" style="flex-shrink:0;margin-bottom:0;"><i class="bi bi-heart" aria-hidden="true"></i></div>
+              <div class="card-icon card-icon-purple" style="flex-shrink:0;margin:0;"><i class="bi bi-heart" aria-hidden="true"></i></div>
               <div><strong>Compassionate Guidance</strong><p class="card-text-custom mb-0">Every reading is delivered with empathy, respect, and genuine care for your wellbeing.</p></div>
             </div>
           </div>
@@ -284,7 +291,7 @@
             <div class="col-sm-6 d-flex">
               <div class="testimonial-card flex-fill">
                 <div class="d-flex gap-3 align-items-center mb-3">
-                  <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:580;">S</div>
+                  <img src="assets/images/testimonials/sana.png" alt="Sana K." style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
                   <div><strong>Sana K.</strong><div class="caption">Dubai, UAE</div></div>
                 </div>
                 <div class="d-flex mb-2" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
@@ -294,7 +301,7 @@
             <div class="col-sm-6 d-flex">
               <div class="testimonial-card flex-fill">
                 <div class="d-flex gap-3 align-items-center mb-3">
-                  <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--secondary),var(--primary));display:flex;align-items:center;justify-content:center;color:#111;font-weight:580;">M</div>
+                  <img src="assets/images/testimonials/marcus.png" alt="Marcus L." style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
                   <div><strong>Marcus L.</strong><div class="caption">London, UK</div></div>
                 </div>
                 <div class="d-flex mb-2" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>

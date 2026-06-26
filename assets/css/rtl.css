@@ -70,6 +70,8 @@
 [dir="rtl"] .field-error-msg { left: auto; right: 0; }
 [dir="rtl"] .field-error-msg::before { left: auto; right: 12px; }
 [dir="rtl"] .char-count { text-align: left; }
+[dir="rtl"] .form-check { padding-left: 0; padding-right: 1.5em; text-align: right; }
+[dir="rtl"] .form-check .form-check-input { float: right; margin-left: 0; margin-right: -1.5em; }
 
 /* ── Newsletter form ── */
 [dir="rtl"] .newsletter-form { flex-direction: row-reverse; }
@@ -109,7 +111,8 @@
 /* ── Auth pages ── */
 [dir="rtl"] .auth-card { text-align: right; }
 [dir="rtl"] .auth-footer-row { flex-direction: row-reverse; }
-[dir="rtl"] .password-toggle { left: 0.875rem; right: auto; }
+[dir="rtl"] .password-toggle { left: 0 !important; right: auto !important; }
+[dir="rtl"] .password-input { padding-left: 2.5rem !important; padding-right: 0.75rem !important; }
 
 /* ── Step numbers (services process) ── */
 [dir="rtl"] .process-connector { transform: scaleX(-1); }
@@ -122,3 +125,6 @@
 
 /* ── Contact info ── */
 [dir="rtl"] .contact-info-item { flex-direction: row-reverse; text-align: right; }
+
+/* -- Auth Toggles -- */
+[dir='rtl'] .auth-toggles { right: auto !important; left: 1.5rem !important; }

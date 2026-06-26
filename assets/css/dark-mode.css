@@ -19,6 +19,11 @@
   --glass-border:     rgba(139,92,246,0.22);
 }
 
+/* ── Typography dark ── */
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
 /* ── Navbar dark ── */
 [data-theme="dark"] #mainNav {
   border-bottom-color: var(--glass-border);
