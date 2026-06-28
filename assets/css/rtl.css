@@ -10,11 +10,22 @@
 [dir="rtl"] .text-md-start { text-align: right !important; }
 [dir="rtl"] .ms-auto { margin-left: 0 !important; margin-right: auto !important; }
 [dir="rtl"] .me-auto { margin-right: 0 !important; margin-left: auto !important; }
+[dir="rtl"] .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-right: 0 !important; margin-left: 1rem !important; }
 [dir="rtl"] .me-4 { margin-right: 0 !important; margin-left: 1.5rem !important; }
+[dir="rtl"] .ms-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-left: 0 !important; margin-right: 1rem !important; }
+
+/* ── Logo Swapping for RTL ── */
+[dir="rtl"] img[src*="logo.svg"] {
+  content: url("../images/logo-rtl.svg");
+}
 
 /* ── Navbar ── */
-[dir="rtl"] .desktop-nav { margin-left: auto; margin-right: 0; }
-[dir="rtl"] .navbar-brand { margin-right: 0; margin-left: 1.5rem; }
+[dir="rtl"] .desktop-nav { margin-left: auto !important; margin-right: auto !important; }
+[dir="rtl"] .navbar-brand { margin-right: 0 !important; margin-left: auto !important; }
 [dir="rtl"] .offcanvas-start { left: auto; right: 0; }
 [dir="rtl"] .offcanvas-custom {
   border-right: none !important;
@@ -41,22 +52,38 @@
 /* ── Hero section ── */
 [dir="rtl"] #hero .text-lg-start { text-align: right !important; }
 [dir="rtl"] .justify-content-lg-start { justify-content: flex-end !important; }
+
+/* Desktop Default */
 [dir="rtl"] .hero-floating-badge.badge-1 { right: auto; left: -20px; }
 [dir="rtl"] .hero-floating-badge.badge-2 { left: auto; right: -30px; }
 [dir="rtl"] .hero-floating-badge.badge-3 { right: auto; left: -30px; }
 
+/* Tablet */
+@media (min-width: 640px) and (max-width: 1023px) {
+  [dir="rtl"] .hero-floating-badge.badge-1 { right: auto; left: 5%; }
+  [dir="rtl"] .hero-floating-badge.badge-2 { left: auto; right: 5%; }
+  [dir="rtl"] .hero-floating-badge.badge-3 { right: auto; left: 5%; }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  [dir="rtl"] .hero-floating-badge.badge-1 { right: auto; left: 2%; }
+  [dir="rtl"] .hero-floating-badge.badge-2 { left: auto; right: 2%; }
+  [dir="rtl"] .hero-floating-badge.badge-3 { right: auto; left: 0%; }
+}
+
 /* ── Cards ── */
-[dir="rtl"] .card-custom { text-align: right; }
-[dir="rtl"] .card-icon { margin-right: 0; }
+[dir="rtl"] .card-custom { text-align: center; }
+[dir="rtl"] .card-icon { margin-right: auto; margin-left: auto; }
 [dir="rtl"] .d-flex { direction: rtl; }
-[dir="rtl"] .flex-row { flex-direction: row-reverse; }
+[dir="rtl"] .flex-row { flex-direction: row; }
 
 /* ── Blog card ── */
 [dir="rtl"] .blog-card-body { text-align: right; }
-[dir="rtl"] .blog-meta { flex-direction: row-reverse; }
+[dir="rtl"] .blog-meta { flex-direction: row; }
 
 /* ── Breadcrumb ── */
-[dir="rtl"] .breadcrumb { flex-direction: row-reverse; }
+[dir="rtl"] .breadcrumb { flex-direction: row; }
 [dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
   content: "\\";
   padding-left: 0;
@@ -66,18 +93,35 @@
 /* ── Form elements ── */
 [dir="rtl"] .calc-input,
 [dir="rtl"] .auth-input,
-[dir="rtl"] .newsletter-input { text-align: right; }
+[dir="rtl"] .newsletter-input { text-align: right; padding-right: 1.5rem !important; padding-left: 2.5rem !important; }
+
+/* ── Date input alignment ── */
+[dir="rtl"] input[type="date"].calc-input {
+  text-align: right;
+  direction: rtl;
+  position: relative;
+}
+[dir="rtl"] input[type="date"].calc-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 1rem;
+  right: auto;
+}
 [dir="rtl"] .field-error-msg { left: auto; right: 0; }
 [dir="rtl"] .field-error-msg::before { left: auto; right: 12px; }
 [dir="rtl"] .char-count { text-align: left; }
 [dir="rtl"] .form-check { padding-left: 0; padding-right: 1.5em; text-align: right; }
 [dir="rtl"] .form-check .form-check-input { float: right; margin-left: 0; margin-right: -1.5em; }
 
+/* ── Blog Hero Subscribe ── */
+[dir="rtl"] .page-hero-content input { padding-right: 1.5rem !important; padding-left: 120px !important; text-align: right; }
+[dir="rtl"] .page-hero-content .end-0 { right: auto !important; left: 0 !important; }
+[dir="rtl"] .page-hero-content .me-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+
 /* ── Newsletter form ── */
-[dir="rtl"] .newsletter-form { flex-direction: row-reverse; }
+[dir="rtl"] .newsletter-form { flex-direction: row; }
 
 /* ── Calculator lead capture ── */
-[dir="rtl"] .calc-lead-capture { flex-direction: row-reverse; }
+[dir="rtl"] .calc-lead-capture { flex-direction: row; }
 
 /* ── Testimonial quote mark ── */
 [dir="rtl"] .testimonial-card::before { right: auto; left: 1.5rem; }
@@ -96,7 +140,7 @@
 /* ── Footer ── */
 [dir="rtl"] .footer-brief { text-align: right; }
 [dir="rtl"] .footer-link { text-align: right; }
-[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-bottom { flex-direction: row; }
 [dir="rtl"] .footer-bottom-links { direction: rtl; }
 
 /* ── Back to top ── */
@@ -109,7 +153,7 @@
 [dir="rtl"] .page-hero-content { text-align: right; }
 
 /* ── Auth pages ── */
-[dir="rtl"] .auth-card { text-align: right; }
+[dir="rtl"] .auth-card { text-align: center; }
 [dir="rtl"] .auth-footer-row { flex-direction: row-reverse; }
 [dir="rtl"] .password-toggle { left: 0 !important; right: auto !important; }
 [dir="rtl"] .password-input { padding-left: 2.5rem !important; padding-right: 0.75rem !important; }
@@ -118,13 +162,18 @@
 [dir="rtl"] .process-connector { transform: scaleX(-1); }
 
 /* ── Social icons row ── */
-[dir="rtl"] .social-icons-row { flex-direction: row-reverse; }
+[dir="rtl"] .social-icons-row { flex-direction: row; }
 
 /* ── Booking form ── */
-[dir="rtl"] .booking-form-row { flex-direction: row-reverse; }
+[dir="rtl"] .booking-form-row { flex-direction: row; }
 
 /* ── Contact info ── */
-[dir="rtl"] .contact-info-item { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .contact-info-item { flex-direction: row; text-align: right; }
 
 /* -- Auth Toggles -- */
 [dir='rtl'] .auth-toggles { right: auto !important; left: 1.5rem !important; }
+
+/* ── Calendar Month Nav ── */
+[dir="rtl"] .calendar-month-nav {
+  flex-direction: row-reverse !important;
+}

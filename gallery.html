@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,10 +31,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="preload" as="style" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;450;480;500;510;520;540;560;580&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;450;480;500;510;520;540;560;580&display=swap"
+    rel="stylesheet" />
 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
 
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
@@ -42,19 +45,20 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/dark-mode.css" />
   <link rel="stylesheet" href="assets/css/rtl.css" />
-  
+
 
   <!-- Inline theme pre-apply -->
   <script>
-  (function(){
-    const t=localStorage.getItem('ns-theme');
-    const r=localStorage.getItem('ns-rtl');
-    if(t) document.documentElement.setAttribute('data-theme',t);
-    if(r==='true') document.documentElement.setAttribute('dir','rtl');
-  })();
+    (function () {
+      const t = localStorage.getItem('ns-theme');
+      const r = localStorage.getItem('ns-rtl');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+      if (r === 'true') document.documentElement.setAttribute('dir', 'rtl');
+    })();
   </script>
 </head>
-<body>
+
+<body class="gallery-page">
 
   <!-- Skip Navigation -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -67,7 +71,8 @@
 
       <!-- Logo -->
       <a href="index.html" class="navbar-brand p-0 me-4" aria-label="NumeroSoul Home">
-        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
+        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50"
+          fetchpriority="high" />
       </a>
 
       <!-- Desktop Navigation -->
@@ -79,22 +84,20 @@
         <li><a href="blog.html" class="nav-link-custom">Blog</a></li>
         <li><a href="gallery.html" class="nav-link-custom active" aria-current="page">Gallery</a></li>
         <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
-        
+
       </ul>
 
       <!-- Right Controls -->
       <div class="d-flex align-items-center gap-2">
-        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop">🌙</button>
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop"><i
+            class="bi bi-moon-stars"></i></button>
         <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL" id="rtlToggleDesktop">RTL</button>
-        <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn" style="font-size:0.9rem;padding:0.55rem 1.25rem;">
+        <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn"
+          style="font-size:0.9rem;padding:0.55rem 1.25rem;">
           <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login
         </a>
-        <button class="navbar-toggler-custom mobile-nav-toggle"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu"
-                aria-controls="mobileMenu"
-                aria-label="Open navigation menu"
-                id="mobileMenuBtn">
+        <button class="navbar-toggler-custom mobile-nav-toggle" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu" aria-label="Open navigation menu" id="mobileMenuBtn">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -102,26 +105,29 @@
   </nav>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu"
+    aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header border-bottom" style="border-color: var(--border) !important;">
-      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160" style="max-width:160px;object-fit:contain;" loading="lazy" />
+      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160"
+        style="max-width:160px;object-fit:contain;" loading="lazy" />
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"
-              style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
+        style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
       <ul class="mb-0" role="list">
-        <li><a href="index.html" class="offcanvas-nav-link">🏠 Home</a></li>
-        <li><a href="home-2.html" class="offcanvas-nav-link">🏠 Home2</a></li>
-        <li><a href="about.html" class="offcanvas-nav-link">👥 About</a></li>
-        <li><a href="services.html" class="offcanvas-nav-link">✨ Services</a></li>
-        <li><a href="blog.html" class="offcanvas-nav-link">📰 Blog</a></li>
-        <li><a href="gallery.html" class="offcanvas-nav-link active" aria-current="page">🖼️ Gallery</a></li>
-        <li><a href="contact.html" class="offcanvas-nav-link">📬 Contact</a></li>
-        
+        <li><a href="index.html" class="offcanvas-nav-link">Home</a></li>
+        <li><a href="home-2.html" class="offcanvas-nav-link">Home2</a></li>
+        <li><a href="about.html" class="offcanvas-nav-link">About</a></li>
+        <li><a href="services.html" class="offcanvas-nav-link">Services</a></li>
+        <li><a href="blog.html" class="offcanvas-nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="offcanvas-nav-link active" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html" class="offcanvas-nav-link">Contact</a></li>
+
       </ul>
       <div class="d-flex flex-column gap-2 mt-4 pb-2">
         <div class="d-flex gap-2">
-          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile">🌙</button>
+          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile"><i
+              class="bi bi-moon-stars"></i></button>
           <button class="nav-toggle-btn flex-fill" data-rtl-toggle id="rtlToggleMobile">RTL</button>
         </div>
         <a href="login.html" class="btn-primary-custom text-center justify-content-center">
@@ -132,275 +138,312 @@
   </div>
   <main id="main-content" role="main">
 
-  <!-- ============================================================
+    <!-- ============================================================
        PAGE HERO / BANNER
        ============================================================ -->
-  <section class="page-hero bg-contact" aria-label="Page header">
-    <div class="page-hero-bg-orb page-hero-bg-orb-1" aria-hidden="true"></div>
-    <div class="page-hero-bg-orb page-hero-bg-orb-2" aria-hidden="true"></div>
-    <div class="container position-relative" style="z-index:2;">
-      <div class="page-hero-content text-center">
-        
-        <h1 class="page-hero-title animate-up">Gallery</h1>
-        <p class="lead page-hero-subtitle animate-up delay-1">A glimpse into our sessions.</p>
+    <section class="page-hero bg-contact" aria-label="Page header">
+      <div class="page-hero-bg-orb page-hero-bg-orb-1" aria-hidden="true"></div>
+      <div class="page-hero-bg-orb page-hero-bg-orb-2" aria-hidden="true"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="page-hero-content text-center">
 
-        <div class="d-flex justify-content-center gap-3 mt-4 animate-up delay-2">
+          <h1 class="page-hero-title animate-up">Gallery</h1>
+          <p class="lead page-hero-subtitle animate-up delay-1">A glimpse into our sessions.</p>
+
+          <div class="d-flex justify-content-center gap-3 mt-4 animate-up delay-2">
             <div class="text-center px-3 border-end border-secondary border-opacity-25">
-                <div class="fs-3 fw-bold text-primary">200+</div>
-                <div class="fs-sm text-muted">Moments Captured</div>
+              <div class="fs-3 fw-bold text-primary">200+</div>
+              <div class="fs-sm text-muted">Moments Captured</div>
             </div>
             <div class="text-center px-3">
-                <div class="fs-3 fw-bold text-secondary">15+</div>
-                <div class="fs-sm text-muted">Global Retreats</div>
+              <div class="fs-3 fw-bold text-secondary">15+</div>
+              <div class="fs-sm text-muted">Global Retreats</div>
             </div>
-        </div>
-        <div class="mt-4 animate-up delay-3">
+          </div>
+          <div class="mt-4 animate-up delay-3">
             <a href="https://instagram.com" target="_blank" class="btn-outline-primary-custom rounded-pill">
-                <i class="bi bi-instagram me-2"></i>Follow our Journey
+              <i class="bi bi-instagram me-2"></i>Follow our Journey
             </a>
-        </div>
+          </div>
 
-</div>
-    </div>
-  </section>
-<style>
-  .gallery-item {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    aspect-ratio: 4 / 3;
-  }
-  .gallery-item img {
-    transition: transform 0.5s ease;
-  }
-  .gallery-item:hover img {
-    transform: scale(1.08);
-  }
-  .gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(139, 92, 246, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    padding: 1rem;
-  }
-  .gallery-item:hover .gallery-overlay {
-    opacity: 1;
-  }
-  .gallery-overlay h4 {
-    transform: translateY(15px);
-    transition: transform 0.3s ease;
-  }
-  .gallery-overlay p {
-    transform: translateY(15px);
-    transition: transform 0.3s ease;
-  }
-  .gallery-item:hover .gallery-overlay h4,
-  .gallery-item:hover .gallery-overlay p {
-    transform: translateY(0);
-  }
-</style>
+        </div>
+      </div>
+    </section>
+    <style>
+      .gallery-item {
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        aspect-ratio: 4 / 3;
+      }
 
-<section class="section-pad">
-  <div class="container">
-    <div class="row g-4" id="galleryGrid">
-      <!-- Item 1 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/sacred_geometry.jpg" alt="Sacred Geometry" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Sacred Geometry</h4>
-            <p class="text-white-50 small mb-0">Discovering universal patterns</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/tarot.jpg" alt="Tarot Reading" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Tarot Reading</h4>
-            <p class="text-white-50 small mb-0">Insights from the cards</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 3 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/astrology.jpg" alt="Astrology Wheel" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Astrology Wheel</h4>
-            <p class="text-white-50 small mb-0">Mapping the stars</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 4 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/meditation.jpg" alt="Peaceful Meditation" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Inner Peace</h4>
-            <p class="text-white-50 small mb-0">Guided sunset meditation</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 5 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/crystals.jpg" alt="Healing Crystals" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Healing Crystals</h4>
-            <p class="text-white-50 small mb-0">Vibrational energy</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 6 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/life_path.jpg" alt="Life Path Numbers" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Life Path Numbers</h4>
-            <p class="text-white-50 small mb-0">Decoding your destiny</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 7 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/lunar.jpg" alt="Lunar Phases" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Lunar Cycles</h4>
-            <p class="text-white-50 small mb-0">Aligning with the moon</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 8 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/nature.jpg" alt="Nature Retreat" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Nature Retreat</h4>
-            <p class="text-white-50 small mb-0">Connecting with earth</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 9 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/cleansing.jpg" alt="Energy Cleansing" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Energy Cleansing</h4>
-            <p class="text-white-50 small mb-0">Purifying the space</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 10 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/sound_healing.jpg" alt="Sound Healing" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Sound Healing</h4>
-            <p class="text-white-50 small mb-0">Harmonic vibrations</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 11 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/chakras.jpg" alt="Chakra Balancing" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Chakra Balancing</h4>
-            <p class="text-white-50 small mb-0">Aligning energy centers</p>
-          </div>
-        </div>
-      </div>
-      <!-- Item 12 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
-          <img src="assets/images/gallery/cosmic.jpg" alt="Cosmic Connection" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
-          <div class="gallery-overlay">
-            <h4 class="text-white fw-bold mb-2">Cosmic Connection</h4>
-            <p class="text-white-50 small mb-0">Exploring the universe</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      .gallery-item img {
+        transition: transform 0.5s ease;
+      }
 
-<!-- ============================================================
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(139, 92, 246, 0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay h4 {
+        transform: translateY(15px);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-overlay p {
+        transform: translateY(15px);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay h4,
+      .gallery-item:hover .gallery-overlay p {
+        transform: translateY(0);
+      }
+    </style>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="row g-4" id="galleryGrid">
+          <!-- Item 1 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/sacred_geometry.jpg" alt="Sacred Geometry"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Sacred Geometry</h4>
+                <p class="text-white-50 small mb-0">Discovering universal patterns</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/tarot.jpg" alt="Tarot Reading"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Tarot Reading</h4>
+                <p class="text-white-50 small mb-0">Insights from the cards</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/astrology.jpg" alt="Astrology Wheel"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Astrology Wheel</h4>
+                <p class="text-white-50 small mb-0">Mapping the stars</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/meditation.jpg" alt="Peaceful Meditation"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Inner Peace</h4>
+                <p class="text-white-50 small mb-0">Guided sunset meditation</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/crystals.jpg" alt="Healing Crystals"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Healing Crystals</h4>
+                <p class="text-white-50 small mb-0">Vibrational energy</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/life_path.jpg" alt="Life Path Numbers"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Life Path Numbers</h4>
+                <p class="text-white-50 small mb-0">Decoding your destiny</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/lunar.jpg" alt="Lunar Phases"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Lunar Cycles</h4>
+                <p class="text-white-50 small mb-0">Aligning with the moon</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/nature.jpg" alt="Nature Retreat"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Nature Retreat</h4>
+                <p class="text-white-50 small mb-0">Connecting with earth</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 9 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/cleansing.jpg" alt="Energy Cleansing"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Energy Cleansing</h4>
+                <p class="text-white-50 small mb-0">Purifying the space</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 10 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/sound_healing.jpg" alt="Sound Healing"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Sound Healing</h4>
+                <p class="text-white-50 small mb-0">Harmonic vibrations</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 11 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/chakras.jpg" alt="Chakra Balancing"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Chakra Balancing</h4>
+                <p class="text-white-50 small mb-0">Aligning energy centers</p>
+              </div>
+            </div>
+          </div>
+          <!-- Item 12 -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="gallery-item overflow-hidden rounded shadow-sm position-relative h-100">
+              <img src="assets/images/gallery/cosmic.jpg" alt="Cosmic Connection"
+                class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+              <div class="gallery-overlay">
+                <h4 class="text-white fw-bold mb-2">Cosmic Connection</h4>
+                <p class="text-white-50 small mb-0">Exploring the universe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
      FEATURED EXPERIENCE SECTION
      ============================================================ -->
-<section class="section-pad position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(217, 70, 239, 0.05) 100%); border-top: 1px solid var(--border);">
-  <!-- Decorative Background Orbs -->
-  <div class="position-absolute rounded-circle" style="width: 300px; height: 300px; background: var(--primary-color); opacity: 0.05; top: -50px; left: -100px; filter: blur(50px); z-index: 0;"></div>
-  <div class="position-absolute rounded-circle" style="width: 400px; height: 400px; background: var(--secondary-color); opacity: 0.05; bottom: -100px; right: -100px; filter: blur(60px); z-index: 0;"></div>
+    <section class="section-pad position-relative overflow-hidden"
+      style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(217, 70, 239, 0.05) 100%); border-top: 1px solid var(--border);">
+      <!-- Decorative Background Orbs -->
+      <div class="position-absolute rounded-circle"
+        style="width: 300px; height: 300px; background: var(--primary-color); opacity: 0.05; top: -50px; left: -100px; filter: blur(50px); z-index: 0;">
+      </div>
+      <div class="position-absolute rounded-circle"
+        style="width: 400px; height: 400px; background: var(--secondary-color); opacity: 0.05; bottom: -100px; right: -100px; filter: blur(60px); z-index: 0;">
+      </div>
 
-  <div class="container position-relative" style="z-index: 1;">
-    <div class="row align-items-center g-5">
-      <!-- Media Column -->
-      <div class="col-lg-6 position-relative">
-        <div class="position-relative d-inline-block w-100 rounded-4 overflow-hidden shadow-lg p-2 bg-body">
-          <img src="assets/images/gallery/featured.jpg" alt="Spiritual Retreat" class="img-fluid rounded-4 w-100 object-fit-cover" style="max-height: 500px;">
-          
-          <!-- Play Button Overlay -->
-          <div class="position-absolute top-50 start-50 translate-middle">
-            <button class="btn btn-primary rounded-circle shadow-lg d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; font-size: 2rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-              <i class="bi bi-play-fill text-white ms-1"></i>
-            </button>
-          </div>
-        </div>
+      <div class="container position-relative" style="z-index: 1;">
+        <div class="row align-items-center g-5">
+          <!-- Media Column -->
+          <div class="col-lg-6 position-relative">
+            <div class="position-relative d-inline-block w-100 rounded-4 overflow-hidden shadow-lg p-2 bg-body">
+              <img src="assets/images/gallery/featured.jpg" alt="Spiritual Retreat"
+                class="img-fluid rounded-4 w-100 object-fit-cover" style="max-height: 500px;">
 
-        <!-- Floating Badge -->
-        <div class="position-absolute bg-body shadow-sm rounded-4 p-3 d-flex align-items-center gap-3" style="bottom: -20px; right: 20px; border: 1px solid var(--border);">
-          <div class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-            <i class="bi bi-star-fill fs-4"></i>
+              <!-- Play Button Overlay -->
+              <div class="position-absolute top-50 start-50 translate-middle">
+                <button
+                  class="btn btn-primary rounded-circle shadow-lg d-flex align-items-center justify-content-center"
+                  style="width: 80px; height: 80px; font-size: 2rem; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); border: none; transition: transform 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                  <i class="bi bi-play-fill text-white ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="position-absolute bg-body shadow-sm rounded-4 p-3 d-flex align-items-center gap-3"
+              style="bottom: -20px; right: 20px; border: 1px solid var(--border);">
+              <div
+                class="bg-primary-subtle text-primary rounded-circle d-flex align-items-center justify-content-center"
+                style="width: 50px; height: 50px;">
+                <i class="bi bi-star-fill fs-4"></i>
+              </div>
+              <div>
+                <div class="fw-bold fs-5 mb-0 text-body">4.9/5</div>
+                <div class="text-muted fs-sm">Participant Rating</div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div class="fw-bold fs-5 mb-0 text-body">4.9/5</div>
-            <div class="text-muted fs-sm">Participant Rating</div>
+
+          <!-- Content Column -->
+          <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+            <span
+              class="badge bg-secondary-subtle text-secondary rounded-pill px-3 py-2 mb-3 fw-medium letter-spacing-1 text-uppercase">Featured
+              Story</span>
+            <h2 class="display-6 fw-bold mb-4" style="line-height: 1.2;">A Journey of <span
+                class="text-gradient">Transformation</span></h2>
+            <p class="lead text-muted mb-4" style="font-size: 1.1rem;">
+              Step behind the scenes of our recent spiritual retreat. Witness the profound moments of clarity,
+              connection, and cosmic alignment that our participants experienced in nature.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-5">
+              <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-body-tertiary border">
+                <i class="bi bi-moon-stars text-primary fs-3 mt-1"></i>
+                <div>
+                  <h4 class="h6 fw-bold mb-1">Guided Meditations</h4>
+                  <p class="mb-0 text-muted fs-sm">Deepen your connection to your inner self under the starlit sky.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-body-tertiary border">
+                <i class="bi bi-infinity text-secondary fs-3 mt-1"></i>
+                <div>
+                  <h4 class="h6 fw-bold mb-1">Numerology Workshops</h4>
+                  <p class="mb-0 text-muted fs-sm">Discover the hidden secrets and profound meaning of your life path
+                    number.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center mt-2">
+              <a href="contact.html"
+                class="btn-primary-custom d-inline-flex align-items-center justify-content-center rounded-pill px-5 py-3 fw-medium hover-lift">
+                Join Our Next Retreat
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Content Column -->
-      <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
-        <span class="badge bg-secondary-subtle text-secondary rounded-pill px-3 py-2 mb-3 fw-medium letter-spacing-1 text-uppercase">Featured Story</span>
-        <h2 class="display-6 fw-bold mb-4" style="line-height: 1.2;">A Journey of <span class="text-gradient">Transformation</span></h2>
-        <p class="lead text-muted mb-4" style="font-size: 1.1rem;">
-          Step behind the scenes of our recent spiritual retreat. Witness the profound moments of clarity, connection, and cosmic alignment that our participants experienced in nature.
-        </p>
-        
-        <div class="d-flex flex-column gap-3 mb-5">
-          <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-body-tertiary border">
-            <i class="bi bi-moon-stars text-primary fs-3 mt-1"></i>
-            <div>
-              <h4 class="h6 fw-bold mb-1">Guided Meditations</h4>
-              <p class="mb-0 text-muted fs-sm">Deepen your connection to your inner self under the starlit sky.</p>
-            </div>
-          </div>
-          <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-body-tertiary border">
-            <i class="bi bi-infinity text-secondary fs-3 mt-1"></i>
-            <div>
-              <h4 class="h6 fw-bold mb-1">Numerology Workshops</h4>
-              <p class="mb-0 text-muted fs-sm">Discover the hidden secrets and profound meaning of your life path number.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-2">
-          <a href="contact.html" class="btn-primary-custom d-inline-flex align-items-center justify-content-center rounded-pill px-5 py-3 fw-medium hover-lift">
-            Join Our Next Retreat
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
   </main>
 
@@ -420,16 +463,20 @@
             Unlocking the ancient wisdom of numbers to guide modern souls toward purpose, clarity, and cosmic alignment.
           </p>
           <div class="d-flex gap-3 mt-4 social-icons-row">
-            <a href="https://instagram.com/numerosoul" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <a href="https://instagram.com/numerosoul" class="footer-social-link" aria-label="Instagram" target="_blank"
+              rel="noopener">
               <i class="bi bi-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://facebook.com/numerosoul" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <a href="https://facebook.com/numerosoul" class="footer-social-link" aria-label="Facebook" target="_blank"
+              rel="noopener">
               <i class="bi bi-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://youtube.com/numerosoul" class="footer-social-link" aria-label="YouTube" target="_blank" rel="noopener">
+            <a href="https://youtube.com/numerosoul" class="footer-social-link" aria-label="YouTube" target="_blank"
+              rel="noopener">
               <i class="bi bi-youtube" aria-hidden="true"></i>
             </a>
-            <a href="https://twitter.com/numerosoul" class="footer-social-link" aria-label="Twitter / X" target="_blank" rel="noopener">
+            <a href="https://twitter.com/numerosoul" class="footer-social-link" aria-label="Twitter / X" target="_blank"
+              rel="noopener">
               <i class="bi bi-twitter-x" aria-hidden="true"></i>
             </a>
           </div>
@@ -466,14 +513,8 @@
           <!-- Mailchimp / ConvertKit placeholder -->
           <!-- ACTION: Replace with Mailchimp embed or ConvertKit form URL -->
           <form class="newsletter-form" id="footerNewsletter" novalidate aria-label="Newsletter signup">
-            <input
-              type="email"
-              class="newsletter-input"
-              placeholder="Your email address"
-              aria-label="Email address"
-              required
-              autocomplete="email"
-            />
+            <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address"
+              required autocomplete="email" />
             <button type="submit" class="btn-primary-custom newsletter-btn" aria-label="Subscribe to newsletter">
               <i class="bi bi-send" aria-hidden="true"></i>
             </button>
@@ -503,8 +544,10 @@
   </footer>
 
   <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+    defer></script>
   <!-- Custom JS (ES6 module, deferred) -->
   <script src="assets/js/main.js" type="module" defer></script>
 </body>
+
 </html>

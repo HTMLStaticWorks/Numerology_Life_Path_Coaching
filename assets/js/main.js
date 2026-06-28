@@ -46,7 +46,7 @@ function initTheme() {
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
-    btn.innerHTML = theme === 'dark' ? '☀' : '🌙';
+    btn.innerHTML = theme === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
     btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   });
 }
@@ -225,18 +225,18 @@ const PYTH_VALUES = {
 const MASTER_NUMBERS = new Set([11, 22, 33]);
 
 const NUMBER_MEANINGS = {
-  1: { title: 'The Leader', emoji: '👑', desc: 'Independent, pioneering, and driven. You are here to forge your own path and inspire others with your unique vision. Leadership is your birthright — own it boldly.' },
-  2: { title: 'The Diplomat', emoji: '🕊️', desc: 'Cooperative, intuitive, and empathetic. You possess an extraordinary gift for harmony and understanding the subtle energies around you. Your strength lies in unity.' },
-  3: { title: 'The Creator', emoji: '🎨', desc: 'Expressive, joyful, and imaginative. The universe flows through your words and art. You are a channel of divine creativity meant to illuminate and uplift.' },
-  4: { title: 'The Builder', emoji: '🏛️', desc: 'Practical, disciplined, and reliable. You lay foundations that endure through time. Your systematic nature turns ambitious dreams into tangible reality.' },
-  5: { title: 'The Adventurer', emoji: '🌍', desc: 'Freedom-loving, versatile, and magnetic. Change is your constant companion. You are here to experience life fully and inspire others with your dynamic spirit.' },
-  6: { title: 'The Nurturer', emoji: '💞', desc: 'Compassionate, responsible, and harmonious. Your heart naturally gravitates toward healing and service. Family and community are your sacred domains.' },
-  7: { title: 'The Seeker', emoji: '🔭', desc: 'Analytical, mystical, and introspective. You are on a perpetual quest for deeper truth. Your mind bridges the scientific and the spiritual realms.' },
-  8: { title: 'The Achiever', emoji: '💎', desc: 'Ambitious, authoritative, and resourceful. You are designed for material and spiritual abundance. Power used with integrity is your ultimate mastery.' },
-  9: { title: 'The Humanitarian', emoji: '🌟', desc: 'Compassionate, wise, and transformative. You carry the wisdom of all numbers. Your purpose is to serve humanity and create a more loving world.' },
-  11: { title: 'Master Intuitive', emoji: '⚡', desc: 'A master number of extraordinary spiritual sensitivity and intuition. You are a channel for higher wisdom. Your insights can inspire and illuminate the world.' },
-  22: { title: 'Master Builder', emoji: '🌐', desc: 'The most powerful master number — the Master Builder. You have the vision of an 11 combined with the practicality of a 4, capable of manifesting dreams on a grand scale.' },
-  33: { title: 'Master Teacher', emoji: '🕊️', desc: 'The rarest master number, embodying pure compassion and selfless service. You are called to uplift humanity through unconditional love and spiritual teaching.' }
+  1: { title: 'The Leader', emoji: '<i class="bi bi-person-badge"></i>', desc: 'Independent, pioneering, and driven. You are here to forge your own path and inspire others with your unique vision. Leadership is your birthright — own it boldly.' },
+  2: { title: 'The Diplomat', emoji: '<i class="bi bi-feather"></i>', desc: 'Cooperative, intuitive, and empathetic. You possess an extraordinary gift for harmony and understanding the subtle energies around you. Your strength lies in unity.' },
+  3: { title: 'The Creator', emoji: '<i class="bi bi-palette"></i>', desc: 'Expressive, joyful, and imaginative. The universe flows through your words and art. You are a channel of divine creativity meant to illuminate and uplift.' },
+  4: { title: 'The Builder', emoji: '<i class="bi bi-bank"></i>', desc: 'Practical, disciplined, and reliable. You lay foundations that endure through time. Your systematic nature turns ambitious dreams into tangible reality.' },
+  5: { title: 'The Adventurer', emoji: '<i class="bi bi-globe"></i>', desc: 'Freedom-loving, versatile, and magnetic. Change is your constant companion. You are here to experience life fully and inspire others with your dynamic spirit.' },
+  6: { title: 'The Nurturer', emoji: '<i class="bi bi-heart-pulse"></i>', desc: 'Compassionate, responsible, and harmonious. Your heart naturally gravitates toward healing and service. Family and community are your sacred domains.' },
+  7: { title: 'The Seeker', emoji: '<i class="bi bi-telescope"></i>', desc: 'Analytical, mystical, and introspective. You are on a perpetual quest for deeper truth. Your mind bridges the scientific and the spiritual realms.' },
+  8: { title: 'The Achiever', emoji: '<i class="bi bi-gem"></i>', desc: 'Ambitious, authoritative, and resourceful. You are designed for material and spiritual abundance. Power used with integrity is your ultimate mastery.' },
+  9: { title: 'The Humanitarian', emoji: '<i class="bi bi-star-fill"></i>', desc: 'Compassionate, wise, and transformative. You carry the wisdom of all numbers. Your purpose is to serve humanity and create a more loving world.' },
+  11: { title: 'Master Intuitive', emoji: '<i class="bi bi-lightning-fill"></i>', desc: 'A master number of extraordinary spiritual sensitivity and intuition. You are a channel for higher wisdom. Your insights can inspire and illuminate the world.' },
+  22: { title: 'Master Builder', emoji: '<i class="bi bi-globe2"></i>', desc: 'The most powerful master number — the Master Builder. You have the vision of an 11 combined with the practicality of a 4, capable of manifesting dreams on a grand scale.' },
+  33: { title: 'Master Teacher', emoji: '<i class="bi bi-feather"></i>', desc: 'The rarest master number, embodying pure compassion and selfless service. You are called to uplift humanity through unconditional love and spiritual teaching.' }
 };
 
 function sumDigits(n) {
@@ -389,7 +389,7 @@ function initCalculator() {
     resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     if (leadSection) leadSection.style.display = 'block';
     if (MASTER_NUMBERS.has(primary)) {
-      showToast('✨ You carry a Master Number — exceptionally rare!');
+      showToast('<i class="bi bi-stars"></i> You carry a Master Number — exceptionally rare!');
     }
   });
 
@@ -400,7 +400,7 @@ function initCalculator() {
       e.preventDefault();
       const email = document.getElementById('leadEmail')?.value || '';
       if (!email) return;
-      showToast('🎉 Your full report is on its way to ' + email + '!');
+      showToast('<i class="bi bi-party-popper"></i> Your full report is on its way to ' + email + '!');
       leadForm.reset();
     });
   }
@@ -496,7 +496,7 @@ document.addEventListener('submit', (e) => {
   if (form.id === 'newsletterForm') {
     e.preventDefault();
     const email = form.querySelector('input[type="email"]')?.value;
-    showToast(`📩 Subscribed! Cosmic insights coming to ${email}`);
+    showToast(`<i class="bi bi-envelope-check"></i> Subscribed! Cosmic insights coming to ${email}`);
     form.reset();
   }
 });
@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initCursorFollowers() {
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
 
-  const characters = ['1', '2', 'A', 'B', '★', '★'];
+  const characters = ['1', '2', 'A', 'B', '<i class="bi bi-star"></i>', '<i class="bi bi-star"></i>'];
   const followers = [];
   let mouseX = window.innerWidth / 2;
   let mouseY = window.innerHeight / 2;
@@ -561,7 +561,7 @@ function initCursorFollowers() {
       left: 0;
       pointer-events: none;
       z-index: 99999;
-      font-size: 1.1rem;
+      font-size: 0.6rem;
       font-weight: 700;
       color: var(--primary, #d4af37);
       text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
@@ -578,7 +578,7 @@ function initCursorFollowers() {
   characters.forEach((char) => {
     const el = document.createElement('div');
     el.className = 'cursor-follower';
-    el.textContent = char;
+    el.innerHTML = char;
     document.body.appendChild(el);
     followers.push({
       element: el,
@@ -646,13 +646,13 @@ function initCursorFollowers() {
    ================================================================ */
 function initFAQ() {
   const faqButtons = document.querySelectorAll('.faq-question');
-  
+
   faqButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
       const controls = btn.getAttribute('aria-controls');
       const answer = document.getElementById(controls);
-      
+
       if (isExpanded) {
         btn.setAttribute('aria-expanded', 'false');
         if (answer) answer.classList.remove('show');
@@ -680,98 +680,127 @@ function initBookingCalendar() {
   const calendarGrid = document.getElementById('calendarGrid');
   const selectedDateDisplay = document.getElementById('selectedDateDisplay');
   const timeSlotsContainer = document.getElementById('timeSlotsContainer');
+  const prevMonthBtn = document.getElementById('prevMonthBtn');
+  const nextMonthBtn = document.getElementById('nextMonthBtn');
+  const currentMonthDisplay = document.getElementById('currentMonthDisplay');
   if (!calendarGrid || !selectedDateDisplay || !timeSlotsContainer) return;
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const currentMonth = today.getMonth();
-  const currentYear = today.getFullYear();
-  
-  const firstDay = new Date(currentYear, currentMonth, 1);
-  
-  let startDate = new Date(firstDay);
-  startDate.setDate(startDate.getDate() - startDate.getDay()); // Start from Sunday
-  
-  let html = '';
+  let displayMonth = today.getMonth();
+  let displayYear = today.getFullYear();
+
   let defaultSelected = new Date(today);
-  defaultSelected.setDate(defaultSelected.getDate() + 1); // Select tomorrow by default
-  
-  for (let i = 0; i < 35; i++) {
-    const d = new Date(startDate);
-    d.setDate(d.getDate() + i);
-    d.setHours(0, 0, 0, 0);
-    
-    // Check if past or today
-    const isPast = d <= today;
-    
-    // Check if in current month
-    const isOtherMonth = d.getMonth() !== currentMonth;
-    
-    const isSelected = d.getTime() === defaultSelected.getTime();
-    
-    let classes = 'p-2 rounded calendar-day';
-    let style = '';
-    
-    if (isPast) {
-      classes += ' text-muted disabled-date';
-      style = 'opacity: 0.3; cursor: not-allowed;';
-    } else {
-      classes += ' hover-lift selectable-date';
-      style = 'cursor: pointer; border: 1px solid transparent;';
-      if (isSelected) {
-        classes += ' bg-primary text-white shadow-sm fw-bold active-date';
-      } else if (d.getDay() === 0 || d.getDay() === 6) {
-        classes += ' text-primary fw-bold';
+  defaultSelected.setDate(defaultSelected.getDate() + 1);
+
+  function renderCalendar() {
+    const firstDay = new Date(displayYear, displayMonth, 1);
+
+    let startDate = new Date(firstDay);
+    startDate.setDate(startDate.getDate() - startDate.getDay());
+
+    let html = '';
+
+    for (let i = 0; i < 42; i++) {
+      const d = new Date(startDate);
+      d.setDate(d.getDate() + i);
+      d.setHours(0, 0, 0, 0);
+
+      const isPast = d < today;
+      const isOtherMonth = d.getMonth() !== displayMonth;
+      const isSelected = d.getTime() === defaultSelected.getTime();
+
+      let classes = 'p-2 rounded calendar-day';
+      let style = '';
+
+      if (isPast) {
+        classes += ' text-muted disabled-date';
+        style = 'opacity: 0.3; cursor: not-allowed;';
+      } else {
+        classes += ' hover-lift selectable-date';
+        style = 'cursor: pointer; border: 1px solid transparent;';
+        if (isSelected) {
+          classes += ' bg-primary text-white shadow-sm fw-bold active-date';
+        } else if (d.getDay() === 0 || d.getDay() === 6) {
+          classes += ' text-primary fw-bold';
+        }
       }
+
+      if (isOtherMonth) {
+        classes += ' text-muted';
+        style += ' opacity: 0.5;';
+      }
+
+      html += `<div class="col" style="width: 14.28%; flex: 0 0 auto;"><div class="${classes}" style="${style}" data-iso="${d.toISOString()}">${d.getDate()}</div></div>`;
     }
-    
-    if (isOtherMonth) {
-      classes += ' text-muted';
-      style += ' opacity: 0.5;';
+
+    calendarGrid.innerHTML = html;
+
+    if (currentMonthDisplay) {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      currentMonthDisplay.textContent = `${months[displayMonth]} ${displayYear}`;
     }
-    
-    html += `<div class="col"><div class="${classes}" style="${style}" data-iso="${d.toISOString()}">${d.getDate()}</div></div>`;
   }
-  
-  calendarGrid.innerHTML = html;
-  
+
+  if (prevMonthBtn && nextMonthBtn) {
+    prevMonthBtn.addEventListener('click', () => {
+      displayMonth--;
+      if (displayMonth < 0) { displayMonth = 11; displayYear--; }
+      renderCalendar();
+    });
+    nextMonthBtn.addEventListener('click', () => {
+      displayMonth++;
+      if (displayMonth > 11) { displayMonth = 0; displayYear++; }
+      renderCalendar();
+    });
+  }
+
   // Setup event listeners
   calendarGrid.addEventListener('click', (e) => {
     const dayBtn = e.target.closest('.selectable-date');
     if (!dayBtn) return;
-    
+
     const iso = dayBtn.getAttribute('data-iso');
     if (!iso) return;
-    
-    // Update active class
-    calendarGrid.querySelectorAll('.selectable-date').forEach(el => {
-      el.classList.remove('bg-primary', 'text-white', 'shadow-sm', 'fw-bold', 'active-date');
-      if (new Date(el.getAttribute('data-iso')).getDay() % 6 === 0) {
-        el.classList.add('text-primary', 'fw-bold');
-      }
-    });
-    
-    dayBtn.classList.remove('text-primary');
-    dayBtn.classList.add('bg-primary', 'text-white', 'shadow-sm', 'fw-bold', 'active-date');
-    
-    updateDateDisplay(new Date(iso));
+
+    const clickedDate = new Date(iso);
+    defaultSelected = clickedDate;
+
+    if (clickedDate.getMonth() !== displayMonth || clickedDate.getFullYear() !== displayYear) {
+      displayMonth = clickedDate.getMonth();
+      displayYear = clickedDate.getFullYear();
+      renderCalendar();
+    } else {
+      // Update active class without full re-render
+      calendarGrid.querySelectorAll('.selectable-date').forEach(el => {
+        el.classList.remove('bg-primary', 'text-white', 'shadow-sm', 'fw-bold', 'active-date');
+        if (new Date(el.getAttribute('data-iso')).getDay() % 6 === 0) {
+          el.classList.add('text-primary', 'fw-bold');
+        }
+      });
+
+      dayBtn.classList.remove('text-primary');
+      dayBtn.classList.add('bg-primary', 'text-white', 'shadow-sm', 'fw-bold', 'active-date');
+    }
+
+    updateDateDisplay(clickedDate);
     renderTimeSlots();
   });
-  
+
   function updateDateDisplay(d) {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    
+
     let nth = 'th';
     const dateStr = d.getDate().toString();
     if (dateStr.endsWith('1') && dateStr !== '11') nth = 'st';
     else if (dateStr.endsWith('2') && dateStr !== '12') nth = 'nd';
     else if (dateStr.endsWith('3') && dateStr !== '13') nth = 'rd';
-    
+
     selectedDateDisplay.textContent = `${days[d.getDay()]}, ${d.getDate()}${nth} ${months[d.getMonth()]}`;
   }
-  
+
   function renderTimeSlots() {
     const times = ['10:00 AM', '11:30 AM', '02:00 PM', '03:30 PM', '05:00 PM'];
     let slotsHtml = '';
@@ -780,19 +809,19 @@ function initBookingCalendar() {
     });
     timeSlotsContainer.innerHTML = slotsHtml;
   }
-  
+
   timeSlotsContainer.addEventListener('click', (e) => {
     const btn = e.target.closest('.time-slot-btn');
     if (!btn) return;
-    
+
     const timeText = btn.getAttribute('data-time');
-    
+
     // Re-render to clear others
     renderTimeSlots();
-    
+
     // Find the re-rendered button and replace it
     const newBtn = Array.from(timeSlotsContainer.querySelectorAll('.time-slot-btn')).find(b => b.getAttribute('data-time') === timeText);
-    
+
     if (newBtn) {
       const wrapper = document.createElement('div');
       wrapper.className = 'd-flex gap-2 mb-1';
@@ -801,19 +830,20 @@ function initBookingCalendar() {
         <button class="btn btn-primary-custom w-50 text-center py-2 shadow-sm confirm-booking-btn">Confirm</button>
       `;
       newBtn.parentNode.replaceChild(wrapper, newBtn);
-      
+
       const confirmBtn = wrapper.querySelector('.confirm-booking-btn');
       confirmBtn.addEventListener('click', () => {
         const dateStr = selectedDateDisplay.textContent;
         showToast(`Booking Confirmed for ${dateStr} at ${timeText}`);
         setTimeout(() => {
-            renderTimeSlots();
+          renderTimeSlots();
         }, 3000);
       });
     }
   });
 
   // Initial render
+  renderCalendar();
   updateDateDisplay(defaultSelected);
   renderTimeSlots();
 }

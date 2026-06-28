@@ -28,6 +28,8 @@
 
   <title>NumeroSoul — Numerology &amp; Life Path Coaching</title>
   <link rel="canonical" href="https://numerosoul.com/" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="alternate icon" href="assets/images/favicon.ico" />
 
   <!-- Google Fonts: Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -84,7 +86,8 @@
 
       <!-- Logo -->
       <a href="index.html" class="navbar-brand p-0 me-4" aria-label="NumeroSoul Home">
-        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
+        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50"
+          fetchpriority="high" />
       </a>
 
       <!-- Desktop Navigation -->
@@ -96,26 +99,23 @@
         <li><a href="blog.html" class="nav-link-custom">Blog</a></li>
         <li><a href="gallery.html" class="nav-link-custom">Gallery</a></li>
         <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
-        
+
       </ul>
 
       <!-- Right Controls -->
       <div class="d-flex align-items-center gap-2">
         <!-- Theme Toggle -->
-        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop">🌙</button>
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop"><i class="bi bi-moon-stars"></i></button>
         <!-- RTL Toggle -->
         <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL" id="rtlToggleDesktop">RTL</button>
         <!-- Login CTA -->
-        <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn" style="font-size:0.9rem;padding:0.55rem 1.25rem;">
+        <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn"
+          style="font-size:0.9rem;padding:0.55rem 1.25rem;">
           <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login
         </a>
         <!-- Mobile Hamburger -->
-        <button class="navbar-toggler-custom mobile-nav-toggle"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu"
-                aria-controls="mobileMenu"
-                aria-label="Open navigation menu"
-                id="mobileMenuBtn">
+        <button class="navbar-toggler-custom mobile-nav-toggle" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu" aria-label="Open navigation menu" id="mobileMenuBtn">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -123,26 +123,28 @@
   </nav>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu"
+    aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header border-bottom" style="border-color: var(--border) !important;">
-      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160" style="max-width:160px;object-fit:contain;" loading="lazy" />
+      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160"
+        style="max-width:160px;object-fit:contain;" loading="lazy" />
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"
-              style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
+        style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
       <ul class="mb-0" role="list">
-        <li><a href="index.html" class="offcanvas-nav-link active" aria-current="page">🏠 Home</a></li>
-        <li><a href="home-2.html" class="offcanvas-nav-link">🏠 Home2</a></li>
-        <li><a href="about.html" class="offcanvas-nav-link">👥 About</a></li>
-        <li><a href="services.html" class="offcanvas-nav-link">✨ Services</a></li>
-        <li><a href="blog.html" class="offcanvas-nav-link">📰 Blog</a></li>
-        <li><a href="gallery.html" class="offcanvas-nav-link">🖼️ Gallery</a></li>
-        <li><a href="contact.html" class="offcanvas-nav-link">📬 Contact</a></li>
-        
+        <li><a href="index.html" class="offcanvas-nav-link active" aria-current="page">Home</a></li>
+        <li><a href="home-2.html" class="offcanvas-nav-link">Home2</a></li>
+        <li><a href="about.html" class="offcanvas-nav-link">About</a></li>
+        <li><a href="services.html" class="offcanvas-nav-link">Services</a></li>
+        <li><a href="blog.html" class="offcanvas-nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="offcanvas-nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="offcanvas-nav-link">Contact</a></li>
+
       </ul>
       <div class="d-flex flex-column gap-2 mt-4 pb-2">
         <div class="d-flex gap-2">
-          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile">🌙</button>
+          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile"><i class="bi bi-moon-stars"></i></button>
           <button class="nav-toggle-btn flex-fill" data-rtl-toggle id="rtlToggleMobile">RTL</button>
         </div>
         <a href="login.html" class="btn-primary-custom text-center justify-content-center">
@@ -183,7 +185,8 @@
 
             <!-- Center Mandala -->
             <div class="hero-mandala" role="img" aria-label="Numerology mandala" style="overflow: hidden; padding: 0;">
-              <img src="assets/images/hero_mandala.png" alt="Numerology Mandala" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+              <img src="assets/images/hero_mandala.png" alt="Numerology Mandala"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
             </div>
 
             <!-- Floating Badges -->
@@ -217,13 +220,15 @@
         <!-- Right: Text Content -->
         <div class="col-12 col-lg-7 text-center d-flex flex-column justify-content-center h-100">
           <div>
-            <div class="section-badge animate-up delay-1 mb-2" style="text-shadow: none;">✨ Ancient Wisdom · Modern Clarity</div>
+            <div class="section-badge animate-up delay-1 mb-2" style="text-shadow: none;"><i class="bi bi-stars"></i> Ancient Wisdom · Modern
+              Clarity</div>
             <h1 class="mt-2 mb-3 animate-up delay-2">
               Find Your<br />
               <span class="text-gradient" style="text-shadow: none;">Cosmic Blueprint</span>
             </h1>
             <p class="lead max-w-600 mx-auto mt-3 animate-up delay-3">
-              Numerology is the ancient science of numbers that reveals your soul's purpose, life challenges, and highest potential. Your name and birthdate hold a unique cosmic code — let us decode it.
+              Numerology is the ancient science of numbers that reveals your soul's purpose, life challenges, and
+              highest potential. Your name and birthdate hold a unique cosmic code — let us decode it.
             </p>
             <!-- CTAs -->
             <div class="d-flex gap-3 justify-content-center flex-wrap mt-4 animate-up delay-4">
@@ -446,7 +451,7 @@
                 <span class="report-trait-tag cyan">Innovative</span>
                 <span class="report-trait-tag">Confident</span>
               </div>
-              <div class="report-meter">
+              <div class="report-meter mt-auto">
                 <div class="report-meter-label"><span>Leadership</span><span>92%</span></div>
                 <div class="report-meter-bar">
                   <div class="report-meter-fill" data-width="92%"></div>
@@ -488,7 +493,7 @@
                 <span class="report-trait-tag gold">Introspective</span>
                 <span class="report-trait-tag cyan">Truthseeker</span>
               </div>
-              <div class="report-meter">
+              <div class="report-meter mt-auto">
                 <div class="report-meter-label"><span>Intuition</span><span>97%</span></div>
                 <div class="report-meter-bar">
                   <div class="report-meter-fill" data-width="97%"></div>
@@ -531,7 +536,7 @@
                 <span class="report-trait-tag gold">Inspirational</span>
                 <span class="report-trait-tag cyan">Psychic</span>
               </div>
-              <div class="report-meter">
+              <div class="report-meter mt-auto">
                 <div class="report-meter-label"><span>Spiritual Power</span><span>99%</span></div>
                 <div class="report-meter-bar">
                   <div class="report-meter-fill" data-width="99%"></div>
@@ -561,12 +566,14 @@
           Every report includes 40+ pages covering all your core numbers, yearly forecasts, compatibility, and
           personalized coaching guidance.
         </p>
-        <a href="#calculator" class="btn-primary-custom me-3">
-          <i class="bi bi-calculator"></i> Get My Free Reading
-        </a>
-        <a href="#testimonials" class="btn-secondary-custom">
-          <i class="bi bi-chat-quote"></i> Read Testimonials
-        </a>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#calculator" class="btn-primary-custom">
+            <i class="bi bi-calculator"></i> Get My Free Reading
+          </a>
+          <a href="#testimonials" class="btn-secondary-custom">
+            <i class="bi bi-chat-quote"></i> Read Testimonials
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -595,7 +602,7 @@
 
             <!-- Calculator Header -->
             <div class="text-center mb-4">
-              <div style="font-size:3rem;margin-bottom:0.5rem;">🔮</div>
+              <div style="font-size:3rem;margin-bottom:0.5rem;"><i class="bi bi-magic"></i></div>
               <h3 style="font-size:1.5rem;font-weight:520;color:var(--text);">Pythagorean Name Calculator</h3>
               <p class="caption">Based on the ancient Pythagorean numerology system</p>
             </div>
@@ -624,7 +631,7 @@
                     style="font-size:0.9rem;font-weight:500;color:var(--text-muted);margin-bottom:0.4rem;">
                     Date of Birth <span class="caption">(optional — for Life Path Number)</span>
                   </label>
-                  <input type="date" id="calcDob" class="calc-input" style="color-scheme: dark;" max="2024-12-31"
+                  <input type="date" id="calcDob" class="calc-input" max="2024-12-31"
                     min="1900-01-01" />
                 </div>
 
@@ -638,7 +645,7 @@
             <!-- Result Display -->
             <div id="calcResult" class="calc-result-display" role="region" aria-live="polite"
               aria-label="Calculation result">
-              <div id="resultEmoji" style="font-size:3rem;margin-bottom:0.5rem;">✨</div>
+              <div id="resultEmoji" style="font-size:3rem;margin-bottom:0.5rem;"><i class="bi bi-stars"></i></div>
               <div class="calc-result-number" id="resultNumber">7</div>
               <div class="calc-result-title" id="resultTitle">The Seeker</div>
               <p class="calc-result-desc" id="resultDesc">Your description will appear here.</p>
@@ -648,7 +655,7 @@
               <div id="calcLeadSection"
                 style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
                 <p class="mb-2" style="font-size:0.95rem;font-weight:500;color:var(--text);">
-                  📬 Get your full 40-page personalized report — free!
+                  <i class="bi bi-envelope-paper"></i> Get your full 40-page personalized report — free!
                 </p>
                 <form id="leadForm" novalidate>
                   <div class="calc-lead-capture">
@@ -659,7 +666,7 @@
                     </button>
                   </div>
                   <p class="caption text-center mt-2" style="opacity:0.7;">
-                    🔒 We respect your privacy. No spam, ever.
+                    <i class="bi bi-lock-fill"></i> We respect your privacy. No spam, ever.
                   </p>
                 </form>
               </div>
@@ -778,8 +785,8 @@
 
         <div class="col-md-6 col-lg-4 reveal">
           <div class="testimonial-card d-flex flex-column h-100 text-center">
-            <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
+            <p style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;"
+              class="flex-grow-1">
               "I was skeptical at first, but my numerology report was uncannily accurate. It described my inner
               struggles and gifts better than years of therapy ever did. The coaching sessions were truly
               transformational."
@@ -787,7 +794,8 @@
             <div class="mt-auto d-flex flex-column align-items-center gap-2">
               <div class="star-rating">★★★★★</div>
               <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
-                <img src="assets/images/testimonials/p1.png" alt="Sophia M." style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/images/testimonials/p1.png" alt="Sophia M."
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Sophia M.</div>
@@ -799,15 +807,16 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-1">
           <div class="testimonial-card d-flex flex-column h-100 text-center">
-            <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
+            <p style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;"
+              class="flex-grow-1">
               "Discovering I'm an 11 — a Master Number — completely shifted how I see my sensitivity and 'overthinking.'
               What I thought were weaknesses are actually my greatest spiritual gifts. Mind blown."
             </p>
             <div class="mt-auto d-flex flex-column align-items-center gap-2">
               <div class="star-rating">★★★★★</div>
               <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
-                <img src="assets/images/testimonials/p2.png" alt="Rajan K." style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/images/testimonials/p2.png" alt="Rajan K."
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Rajan K.</div>
@@ -819,15 +828,16 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-2">
           <div class="testimonial-card d-flex flex-column h-100 text-center">
-            <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
+            <p style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;"
+              class="flex-grow-1">
               "The Personal Year number coaching was like having a cosmic calendar. I timed a major business launch
               using my numerology forecast and had the best year of my career. This is real."
             </p>
             <div class="mt-auto d-flex flex-column align-items-center gap-2">
               <div class="star-rating">★★★★★</div>
               <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
-                <img src="assets/images/testimonials/p3.png" alt="Luna C." style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/images/testimonials/p3.png" alt="Luna C."
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Luna C.</div>
@@ -839,15 +849,16 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-3">
           <div class="testimonial-card d-flex flex-column h-100 text-center">
-            <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
+            <p style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;"
+              class="flex-grow-1">
               "I used the compatibility reading for my relationship. It helped us understand our differences so much
               better — we stopped fighting against each other and started working with our energies."
             </p>
             <div class="mt-auto d-flex flex-column align-items-center gap-2">
               <div class="star-rating">★★★★★</div>
               <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
-                <img src="assets/images/testimonials/p4.png" alt="Amara J." style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/images/testimonials/p4.png" alt="Amara J."
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Amara J.</div>
@@ -859,15 +870,16 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-4">
           <div class="testimonial-card d-flex flex-column h-100 text-center">
-            <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
+            <p style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;"
+              class="flex-grow-1">
               "As a data scientist, I approached this analytically. After three months of tracking my Personal Year
               themes, the correlations are statistically hard to dismiss. My 7 year was intensely introspective."
             </p>
             <div class="mt-auto d-flex flex-column align-items-center gap-2">
               <div class="star-rating">★★★★★</div>
               <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
-                <img src="assets/images/testimonials/p5.png" alt="Dev P." style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/images/testimonials/p5.png" alt="Dev P."
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Dev P.</div>
@@ -879,15 +891,16 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-5">
           <div class="testimonial-card d-flex flex-column h-100 text-center">
-            <p
-              style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;" class="flex-grow-1">
+            <p style="font-size:0.95rem;color:var(--text-muted);font-style:italic;line-height:1.7;margin-bottom:1.5rem;"
+              class="flex-grow-1">
               "After my divorce, I was completely lost. My Life Path 2 reading showed me that my sensitivity was a gift,
               not a flaw. The coaching helped me rebuild my life with clarity and confidence."
             </p>
             <div class="mt-auto d-flex flex-column align-items-center gap-2">
               <div class="star-rating">★★★★★</div>
               <div class="testimonial-avatar" style="overflow:hidden; padding:0;">
-                <img src="assets/images/testimonials/p6.png" alt="Nadia W." style="width:100%; height:100%; object-fit:cover;">
+                <img src="assets/images/testimonials/p6.png" alt="Nadia W."
+                  style="width:100%; height:100%; object-fit:cover;">
               </div>
               <div>
                 <div style="font-weight:510;font-size:0.95rem;color:var(--text);">Nadia W.</div>
@@ -927,7 +940,7 @@
         <div class="col-lg-8 text-center">
           <div class="section-badge"
             style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.9);border-color:rgba(255,255,255,0.2);">
-            ✨ Begin Your Journey
+            <i class="bi bi-stars"></i> Begin Your Journey
           </div>
           <h2 class="mt-3 mb-4 reveal" style="color:#fff;">
             Your Numbers Are
@@ -964,94 +977,74 @@
        ============================================================ -->
   <footer id="footer" role="contentinfo">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-4 g-lg-5 footer-top">
 
         <!-- Brand Column -->
         <div class="col-lg-4">
-          <div class="footer-logo">
-            <img src="assets/images/logo.png" alt="NumeroSoul Logo" width="180" height="46" />
+          <div class="footer-logo mb-3">
+            <img src="assets/images/logo.svg" alt="NumeroSoul Logo" width="180" height="50" fetchpriority="high" />
           </div>
           <p class="footer-brief">
             Unlocking the ancient wisdom of numbers to guide modern souls toward purpose, clarity, and cosmic alignment.
-            Your blueprint exists — let us reveal it.
           </p>
-          <!-- Social Icons -->
-          <div class="d-flex gap-2 flex-wrap">
-            <a href="https://instagram.com/numerosoul" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="Instagram">
-              <i class="bi bi-instagram"></i>
+          <div class="d-flex gap-3 mt-4 social-icons-row">
+            <a href="https://instagram.com/numerosoul" class="footer-social-link" aria-label="Instagram" target="_blank"
+              rel="noopener">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://facebook.com/numerosoul" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="Facebook">
-              <i class="bi bi-facebook"></i>
+            <a href="https://facebook.com/numerosoul" class="footer-social-link" aria-label="Facebook" target="_blank"
+              rel="noopener">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://youtube.com/numerosoul" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="YouTube">
-              <i class="bi bi-youtube"></i>
+            <a href="https://youtube.com/numerosoul" class="footer-social-link" aria-label="YouTube" target="_blank"
+              rel="noopener">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
             </a>
-            <a href="https://twitter.com/numerosoul" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="Twitter / X">
-              <i class="bi bi-twitter-x"></i>
-            </a>
-            <a href="https://pinterest.com/numerosoul" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="Pinterest">
-              <i class="bi bi-pinterest"></i>
+            <a href="https://twitter.com/numerosoul" class="footer-social-link" aria-label="Twitter / X" target="_blank"
+              rel="noopener">
+              <i class="bi bi-twitter-x" aria-hidden="true"></i>
             </a>
           </div>
         </div>
 
         <!-- Quick Links -->
         <div class="col-sm-6 col-lg-2">
-          <h5 class="footer-heading">Quick Links</h5>
-          <ul>
-            <li><a href="#hero" class="footer-link">Home</a></li>
-            <li><a href="#principles" class="footer-link">Numerology 101</a></li>
-            <li><a href="#reports" class="footer-link">Sample Reports</a></li>
-            <li><a href="#calculator" class="footer-link">Free Calculator</a></li>
-            <li><a href="#testimonials" class="footer-link">Testimonials</a></li>
-            <li><a href="#cta" class="footer-link">Get Started</a></li>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="blog.html" class="footer-link">Pricing</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
           </ul>
         </div>
 
         <!-- Resources -->
         <div class="col-sm-6 col-lg-2">
-          <h5 class="footer-heading">Resources</h5>
-          <ul>
-            <li><a href="#" class="footer-link">Life Path Numbers</a></li>
-            <li><a href="#" class="footer-link">Master Numbers Guide</a></li>
-            <li><a href="#" class="footer-link">Compatibility Chart</a></li>
-            <li><a href="#" class="footer-link">Personal Year Guide</a></li>
-            <li><a href="#" class="footer-link">Numerology Blog</a></li>
-            <li><a href="#" class="footer-link">FAQs</a></li>
+          <h3 class="footer-heading">Resources</h3>
+          <ul class="footer-links">
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="home-2.html" class="footer-link">How It Works</a></li>
+            <li><a href="contact.html" class="footer-link">Book a Session</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="404.html" class="footer-link">Sitemap</a></li>
           </ul>
         </div>
 
         <!-- Newsletter -->
         <div class="col-lg-4">
-          <h5 class="footer-heading">Cosmic Weekly Insights</h5>
-          <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.25rem;">
-            Receive weekly numerology forecasts, life path tips, and exclusive offers delivered to your inbox.
-          </p>
-          <form id="newsletterForm" novalidate>
-            <div class="newsletter-form">
-              <input type="email" class="newsletter-input" placeholder="Your email address" required
-                aria-label="Email for newsletter" />
-              <button type="submit" class="newsletter-btn">Subscribe</button>
-            </div>
+          <h3 class="footer-heading">Stay Aligned</h3>
+          <p class="footer-brief">Receive cosmic insights, numerology tips, and exclusive offers.</p>
+          <!-- Mailchimp / ConvertKit placeholder -->
+          <!-- ACTION: Replace with Mailchimp embed or ConvertKit form URL -->
+          <form class="newsletter-form" id="footerNewsletter" novalidate aria-label="Newsletter signup">
+            <input type="email" class="newsletter-input" placeholder="Your email address" aria-label="Email address"
+              required autocomplete="email" />
+            <button type="submit" class="btn-primary-custom newsletter-btn" aria-label="Subscribe to newsletter">
+              <i class="bi bi-send" aria-hidden="true"></i>
+            </button>
           </form>
-          <p class="caption mt-2" style="opacity:0.65;">🔒 No spam. Unsubscribe anytime.</p>
-
-          <!-- Contact info -->
-          <div class="mt-4 d-flex flex-column gap-2">
-            <div class="d-flex align-items-center gap-2" style="font-size:0.88rem;color:var(--text-muted);">
-              <i class="bi bi-envelope" style="color:var(--primary);"></i>
-              hello@numerosoul.com
-            </div>
-            <div class="d-flex align-items-center gap-2" style="font-size:0.88rem;color:var(--text-muted);">
-              <i class="bi bi-clock" style="color:var(--primary);"></i>
-              Mon–Fri, 9 AM – 6 PM IST
-            </div>
-          </div>
+          <p class="caption mt-2">No spam. Unsubscribe anytime.</p>
         </div>
 
       </div>
@@ -1071,7 +1064,7 @@
 
     <!-- Back to Top Button -->
     <button id="backToTop" aria-label="Back to top">
-      <i class="bi bi-chevron-up"></i>
+      <i class="bi bi-chevron-up" aria-hidden="true"></i>
     </button>
   </footer>
 

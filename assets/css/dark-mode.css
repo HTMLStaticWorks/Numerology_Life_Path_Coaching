@@ -48,13 +48,18 @@
 
 /* ── Form inputs dark ── */
 [data-theme="dark"] .calc-input,
-[data-theme="dark"] .newsletter-input {
+[data-theme="dark"] .newsletter-input,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] textarea {
   background: var(--bg-alt);
   border-color: var(--border);
   color: var(--text);
 }
 [data-theme="dark"] .calc-input::placeholder,
-[data-theme="dark"] .newsletter-input::placeholder {
+[data-theme="dark"] .newsletter-input::placeholder,
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] textarea::placeholder {
   color: var(--text-muted);
 }
 
@@ -64,7 +69,7 @@
   border-color: var(--border);
 }
 [data-theme="dark"] .auth-input {
-  background: var(--bg-alt);
+  background: #000000;
   border-color: var(--border);
   color: var(--text);
 }
@@ -92,6 +97,7 @@
 [data-theme="dark"] .pricing-feature-divider { border-color: var(--border); }
 
 /* ── Gallery dark ── */
+[data-theme="dark"] body.gallery-page { background-color: #000000; }
 [data-theme="dark"] .gallery-item-overlay { background: rgba(0,0,0,0.75); }
 
 /* ── Contact dark ── */
@@ -123,7 +129,13 @@
   border-top-color: var(--border);
 }
 [data-theme="dark"] .footer-link { color: var(--text-muted); }
+[data-theme="dark"] .footer-link:hover { color: var(--gold); }
 [data-theme="dark"] .footer-copyright { color: var(--text-muted); }
+
+/* ── Card Icons dark ── */
+[data-theme="dark"] .card-icon-purple {
+  background: var(--bg-alt);
+}
 
 /* ── Nav toggle dark ── */
 [data-theme="dark"] .nav-toggle-btn {
@@ -133,3 +145,11 @@
 
 /* ── Scrollbar dark ── */
 [data-theme="dark"] ::-webkit-scrollbar-track { background: var(--bg); }
+
+/* ── Bootstrap Utilities Override ── */
+[data-theme="dark"] .bg-body {
+  background-color: var(--bg) !important;
+}
+[data-theme="dark"] .bg-body-tertiary {
+  background-color: var(--bg-card) !important;
+}

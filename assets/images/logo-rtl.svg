@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon: Simple mandala / sun -->
+  <g transform="translate(140, 10)">
+    <circle cx="15" cy="15" r="12" fill="none" stroke="url(#logoGrad)" stroke-width="2"/>
+    <path d="M15 3 L15 27 M3 15 L27 15 M6.5 6.5 L23.5 23.5 M6.5 23.5 L23.5 6.5" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="15" cy="15" r="4" fill="#F59E0B"/>
+  </g>
+  <!-- Text: NumeroSoul -->
+  <text x="10" y="32" font-family="'Outfit', sans-serif" font-size="24" font-weight="600" fill="#8B5CF6">NUMER<tspan fill="#F59E0B">Sol</tspan></text>
+</svg>

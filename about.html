@@ -84,7 +84,7 @@
 
       <!-- Right Controls -->
       <div class="d-flex align-items-center gap-2">
-        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop">🌙</button>
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop"><i class="bi bi-moon-stars"></i></button>
         <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL" id="rtlToggleDesktop">RTL</button>
         <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn" style="font-size:0.9rem;padding:0.55rem 1.25rem;">
           <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login
@@ -110,18 +110,18 @@
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
       <ul class="mb-0" role="list">
-        <li><a href="index.html" class="offcanvas-nav-link">🏠 Home</a></li>
-        <li><a href="home-2.html" class="offcanvas-nav-link">🏠 Home2</a></li>
-        <li><a href="about.html" class="offcanvas-nav-link active" aria-current="page">👥 About</a></li>
-        <li><a href="services.html" class="offcanvas-nav-link">✨ Services</a></li>
-        <li><a href="blog.html" class="offcanvas-nav-link">📰 Blog</a></li>
-        <li><a href="gallery.html" class="offcanvas-nav-link">🖼️ Gallery</a></li>
-        <li><a href="contact.html" class="offcanvas-nav-link">📬 Contact</a></li>
+        <li><a href="index.html" class="offcanvas-nav-link">Home</a></li>
+        <li><a href="home-2.html" class="offcanvas-nav-link">Home2</a></li>
+        <li><a href="about.html" class="offcanvas-nav-link active" aria-current="page">About</a></li>
+        <li><a href="services.html" class="offcanvas-nav-link">Services</a></li>
+        <li><a href="blog.html" class="offcanvas-nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="offcanvas-nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="offcanvas-nav-link">Contact</a></li>
         
       </ul>
       <div class="d-flex flex-column gap-2 mt-4 pb-2">
         <div class="d-flex gap-2">
-          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile">🌙</button>
+          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile"><i class="bi bi-moon-stars"></i></button>
           <button class="nav-toggle-btn flex-fill" data-rtl-toggle id="rtlToggleMobile">RTL</button>
         </div>
         <a href="login.html" class="btn-primary-custom text-center justify-content-center">
@@ -140,22 +140,22 @@
     <div class="page-hero-bg-orb page-hero-bg-orb-2" aria-hidden="true"></div>
     <div class="container position-relative" style="z-index:2;">
       <div class="page-hero-content text-center">
-        <div class="section-badge mb-3 reveal">✨ Our Story</div>
+        <div class="section-badge mb-3 reveal"><i class="bi bi-stars"></i> Our Story</div>
         <h1 class="page-hero-title animate-up">About NumeroSoul</h1>
         <p class="lead page-hero-subtitle animate-up delay-1">Ancient wisdom, modern clarity — meet the team dedicated to helping you decode your cosmic blueprint.</p>
 
         <div class="row justify-content-center mt-5 animate-up delay-2">
             <div class="col-md-8">
                 <div class="row text-center g-4">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <div class="fs-2 fw-bold text-primary">10+</div>
                         <div class="fs-sm text-muted text-uppercase tracking-wide">Years Exp</div>
                     </div>
-                    <div class="col-4" style="border-left: 1px solid var(--border); border-right: 1px solid var(--border);">
+                    <div class="col-12 col-md-4 about-stat-middle">
                         <div class="fs-2 fw-bold text-secondary">50K+</div>
                         <div class="fs-sm text-muted text-uppercase tracking-wide">Readings</div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <div class="fs-2 fw-bold text-success">8</div>
                         <div class="fs-sm text-muted text-uppercase tracking-wide">Master Guides</div>
                     </div>
@@ -181,10 +181,19 @@
           <p class="mt-4">NumeroSoul was founded in 2014 by Master Numerologist <strong>Aanya Sharma</strong>, who discovered the Pythagorean system while studying ancient Vedic texts at the age of 22. What began as a personal journey of self-discovery grew into a thriving practice serving thousands of clients across 40+ countries.</p>
           <p>Our philosophy is simple: numerology is not prediction — it is <em>preparation</em>. It reveals the energetic signature you arrived with so you can make conscious choices aligned with your authentic self.</p>
           <p>Today, NumeroSoul operates with a team of 8 certified numerologists, a proprietary calculation engine, and a growing community of 50,000+ aligned souls worldwide.</p>
-          <div class="d-flex gap-4 mt-4 flex-wrap">
-            <div><div class="fw-500" style="font-size:2rem;color:var(--primary);">10+</div><div class="caption">Years of Practice</div></div>
-            <div><div class="fw-500" style="font-size:2rem;color:var(--secondary);">50K+</div><div class="caption">Clients Served</div></div>
-            <div><div class="fw-500" style="font-size:2rem;color:var(--primary);">40+</div><div class="caption">Countries Reached</div></div>
+          <div class="row g-4 mt-3 text-center text-lg-start">
+            <div class="col-12 col-sm-4">
+              <div class="fw-500" style="font-size:2rem;color:var(--primary);">10+</div>
+              <div class="caption">Years of Practice</div>
+            </div>
+            <div class="col-12 col-sm-4">
+              <div class="fw-500" style="font-size:2rem;color:var(--secondary);">50K+</div>
+              <div class="caption">Clients Served</div>
+            </div>
+            <div class="col-12 col-sm-4">
+              <div class="fw-500" style="font-size:2rem;color:var(--primary);">40+</div>
+              <div class="caption">Countries Reached</div>
+            </div>
           </div>
         </div>
         <div class="col-lg-6 reveal delay-1">
@@ -224,7 +233,7 @@
             <h3 class="card-title-custom">Aanya Sharma</h3>
             <div class="section-badge mb-2" style="font-size:0.75rem;">Founder & Master Numerologist</div>
             <p class="card-text-custom">Pythagorean & Chaldean systems. 10+ years. Author of "Numbers That Heal."</p>
-            <div class="d-flex justify-content-center gap-3 mt-3">
+            <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
               <a href="#" aria-label="Aanya's LinkedIn" class="footer-social-link"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
               <a href="#" aria-label="Aanya's Instagram" class="footer-social-link"><i class="bi bi-instagram" aria-hidden="true"></i></a>
             </div>
@@ -236,7 +245,7 @@
             <h3 class="card-title-custom">Rohan Mehra</h3>
             <div class="section-badge section-badge-gold mb-2" style="font-size:0.75rem;">Senior Numerologist</div>
             <p class="card-text-custom">Relationship compatibility specialist. Vedic numerology background. 7 years practice.</p>
-            <div class="d-flex justify-content-center gap-3 mt-3">
+            <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
               <a href="#" aria-label="Rohan's LinkedIn" class="footer-social-link"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
               <a href="#" aria-label="Rohan's Instagram" class="footer-social-link"><i class="bi bi-instagram" aria-hidden="true"></i></a>
             </div>
@@ -248,7 +257,7 @@
             <h3 class="card-title-custom">Priya Nair</h3>
             <div class="section-badge mb-2" style="font-size:0.75rem;">Numerology Coach</div>
             <p class="card-text-custom">Career & business numerology focus. Life Purpose coaching. Certified wellness guide.</p>
-            <div class="d-flex justify-content-center gap-3 mt-3">
+            <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
               <a href="#" aria-label="Priya's LinkedIn" class="footer-social-link"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
               <a href="#" aria-label="Priya's Instagram" class="footer-social-link"><i class="bi bi-instagram" aria-hidden="true"></i></a>
             </div>
@@ -267,45 +276,48 @@
         <div class="section-badge mb-3">🎯 Our Purpose</div>
         <h2 id="mission-heading">Mission &amp; <span class="text-gradient">Core Values</span></h2>
       </div>
-      <div class="row g-5 align-items-start">
-        <div class="col-lg-6 reveal">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 col-xl-8 reveal">
           <p class="mt-4"><strong>Mission:</strong> To make numerology accessible, practical, and transformative for every soul — regardless of background, belief, or experience level.</p>
           <div class="d-flex flex-column gap-3 mt-4">
-            <div class="d-flex gap-3 align-items-start">
+            <div class="d-flex flex-column flex-sm-row gap-3 align-items-center align-items-sm-start text-center text-sm-start">
               <div class="card-icon card-icon-purple" style="flex-shrink:0;margin:0;"><i class="bi bi-eye" aria-hidden="true"></i></div>
               <div><strong>Clarity Over Confusion</strong><p class="card-text-custom mb-0">We translate complex ancient systems into clear, actionable insights you can act on today.</p></div>
             </div>
-            <div class="d-flex gap-3 align-items-start">
+            <div class="d-flex flex-column flex-sm-row gap-3 align-items-center align-items-sm-start text-center text-sm-start">
               <div class="card-icon card-icon-gold" style="flex-shrink:0;margin:0;"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
               <div><strong>Integrity Above All</strong><p class="card-text-custom mb-0">We never oversell or make predictions. Numerology is a lens — not a prophecy.</p></div>
             </div>
-            <div class="d-flex gap-3 align-items-start">
+            <div class="d-flex flex-column flex-sm-row gap-3 align-items-center align-items-sm-start text-center text-sm-start">
               <div class="card-icon card-icon-purple" style="flex-shrink:0;margin:0;"><i class="bi bi-heart" aria-hidden="true"></i></div>
               <div><strong>Compassionate Guidance</strong><p class="card-text-custom mb-0">Every reading is delivered with empathy, respect, and genuine care for your wellbeing.</p></div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal delay-1">
-          <div class="section-badge section-badge-gold mb-4">💬 What Clients Say</div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8 reveal delay-1">
+          <div class="section-badge section-badge-gold mb-4 text-center text-sm-start">💬 What Clients Say</div>
           <div class="row g-4">
-            <div class="col-sm-6 d-flex">
-              <div class="testimonial-card flex-fill">
+            <div class="col-sm-6">
+              <div class="testimonial-card h-100 d-flex flex-column">
                 <div class="d-flex gap-3 align-items-center mb-3">
                   <img src="assets/images/testimonials/sana.png" alt="Sana K." style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
                   <div><strong>Sana K.</strong><div class="caption">Dubai, UAE</div></div>
                 </div>
                 <div class="d-flex mb-2" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
-                <p class="card-text-custom mb-0">"Aanya's reading was the most accurate self-reflection I've ever experienced. I finally understood why I kept hitting the same walls — and how to break through them."</p>
+                <p class="card-text-custom mb-0 mt-auto">"Aanya's reading was the most accurate self-reflection I've ever experienced. I finally understood why I kept hitting the same walls — and how to break through them."</p>
               </div>
             </div>
-            <div class="col-sm-6 d-flex">
-              <div class="testimonial-card flex-fill">
+            <div class="col-sm-6">
+              <div class="testimonial-card h-100 d-flex flex-column">
                 <div class="d-flex gap-3 align-items-center mb-3">
                   <img src="assets/images/testimonials/marcus.png" alt="Marcus L." style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
                   <div><strong>Marcus L.</strong><div class="caption">London, UK</div></div>
                 </div>
                 <div class="d-flex mb-2" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</div>
-                <p class="card-text-custom mb-0">"I was skeptical. But my Life Path report described my career struggles and relationship patterns so precisely that I couldn't dismiss it. Game-changer."</p>
+                <p class="card-text-custom mb-0 mt-auto">"I was skeptical. But my Life Path report described my career struggles and relationship patterns so precisely that I couldn't dismiss it. Game-changer."</p>
               </div>
             </div>
           </div>

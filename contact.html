@@ -84,7 +84,7 @@
 
       <!-- Right Controls -->
       <div class="d-flex align-items-center gap-2">
-        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop">🌙</button>
+        <button class="nav-toggle-btn" data-theme-toggle aria-label="Toggle theme" id="themeToggleDesktop"><i class="bi bi-moon-stars"></i></button>
         <button class="nav-toggle-btn" data-rtl-toggle aria-label="Toggle RTL" id="rtlToggleDesktop">RTL</button>
         <a href="login.html" class="btn-primary-custom d-none d-lg-inline-flex" id="loginBtn" style="font-size:0.9rem;padding:0.55rem 1.25rem;">
           <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login
@@ -110,18 +110,18 @@
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
       <ul class="mb-0" role="list">
-        <li><a href="index.html" class="offcanvas-nav-link">🏠 Home</a></li>
-        <li><a href="home-2.html" class="offcanvas-nav-link">🏠 Home2</a></li>
-        <li><a href="about.html" class="offcanvas-nav-link">👥 About</a></li>
-        <li><a href="services.html" class="offcanvas-nav-link">✨ Services</a></li>
-        <li><a href="blog.html" class="offcanvas-nav-link">📰 Blog</a></li>
-        <li><a href="gallery.html" class="offcanvas-nav-link">🖼️ Gallery</a></li>
-        <li><a href="contact.html" class="offcanvas-nav-link active" aria-current="page">📬 Contact</a></li>
+        <li><a href="index.html" class="offcanvas-nav-link">Home</a></li>
+        <li><a href="home-2.html" class="offcanvas-nav-link">Home2</a></li>
+        <li><a href="about.html" class="offcanvas-nav-link">About</a></li>
+        <li><a href="services.html" class="offcanvas-nav-link">Services</a></li>
+        <li><a href="blog.html" class="offcanvas-nav-link">Blog</a></li>
+        <li><a href="gallery.html" class="offcanvas-nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="offcanvas-nav-link active" aria-current="page">Contact</a></li>
         
       </ul>
       <div class="d-flex flex-column gap-2 mt-4 pb-2">
         <div class="d-flex gap-2">
-          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile">🌙</button>
+          <button class="nav-toggle-btn flex-fill" data-theme-toggle id="themeToggleMobile"><i class="bi bi-moon-stars"></i></button>
           <button class="nav-toggle-btn flex-fill" data-rtl-toggle id="rtlToggleMobile">RTL</button>
         </div>
         <a href="login.html" class="btn-primary-custom text-center justify-content-center">
@@ -165,6 +165,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="d-flex justify-content-center gap-4 mt-4 animate-up delay-3">
+                    <a href="https://instagram.com/numerosoul" class="footer-social-link fs-4" aria-label="Instagram" target="_blank" rel="noopener">
+                      <i class="bi bi-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://facebook.com/numerosoul" class="footer-social-link fs-4" aria-label="Facebook" target="_blank" rel="noopener">
+                      <i class="bi bi-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://youtube.com/numerosoul" class="footer-social-link fs-4" aria-label="YouTube" target="_blank" rel="noopener">
+                      <i class="bi bi-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/numerosoul" class="footer-social-link fs-4" aria-label="Twitter / X" target="_blank" rel="noopener">
+                      <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -198,7 +212,14 @@
             
             <div class="row g-4">
               <div class="col-md-7">
-                <h6 class="mb-3 d-flex align-items-center"><i class="bi bi-calendar3 me-2 text-primary"></i> Select a Date</h6>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h6 class="mb-0 d-flex align-items-center"><i class="bi bi-calendar3 me-2 text-primary"></i> Select a Date</h6>
+                  <div class="d-flex align-items-center gap-2 calendar-month-nav">
+                    <button class="btn btn-sm btn-outline-secondary px-2 py-1" id="prevMonthBtn" aria-label="Previous Month"><i class="bi bi-chevron-left"></i></button>
+                    <span id="currentMonthDisplay" class="fw-medium text-muted small" style="min-width: 80px; text-align: center;">Month</span>
+                    <button class="btn btn-sm btn-outline-secondary px-2 py-1" id="nextMonthBtn" aria-label="Next Month"><i class="bi bi-chevron-right"></i></button>
+                  </div>
+                </div>
                 <div class="row g-2 text-center mb-3">
                   <div class="col"><div class="text-muted small mb-1 fw-medium">Su</div></div>
                   <div class="col"><div class="text-muted small mb-1 fw-medium">Mo</div></div>
