@@ -23,6 +23,9 @@
 [data-theme="dark"] .text-muted {
   color: var(--text-muted) !important;
 }
+[data-theme="dark"] .text-body {
+  color: var(--text) !important;
+}
 
 /* ── Navbar dark ── */
 [data-theme="dark"] #mainNav {

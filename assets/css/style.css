@@ -1030,6 +1030,7 @@ p {
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid var(--border);
+  min-height: 145px;
 }
 
 .report-number-display {
@@ -2964,4 +2965,8 @@ to {
   top: 1.5rem;
   right: 1.5rem;
   z-index: 10;
+}
+
+.num-badge {
+  padding-left: 10px;
 }

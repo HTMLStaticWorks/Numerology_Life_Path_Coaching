@@ -138,7 +138,7 @@
 [dir="rtl"] .gallery-filters { flex-direction: row-reverse; }
 
 /* ── Footer ── */
-[dir="rtl"] .footer-brief { text-align: right; }
+[dir="rtl"] .footer-brief { text-align: right; direction: ltr; unicode-bidi: plaintext; }
 [dir="rtl"] .footer-link { text-align: right; }
 [dir="rtl"] .footer-bottom { flex-direction: row; }
 [dir="rtl"] .footer-bottom-links { direction: rtl; }
