@@ -22,13 +22,14 @@
 
   <title>About NumeroSoul — Our Story & Team</title>
   <link rel="canonical" href="https://numerosoul.com/about.html" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="alternate icon" href="assets/images/favicon.ico" />
 
   <!-- Resource Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="assets/images/logo_light.png" type="image/png" />
+  <link rel="preload" as="image" href="assets/images/logo_dark.png" type="image/png" />
   <link rel="preload" as="style" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;450;480;500;510;520;540;560;580&display=swap" rel="stylesheet" />
 
@@ -67,7 +68,8 @@
 
       <!-- Logo -->
       <a href="index.html" class="navbar-brand p-0 me-4" aria-label="NumeroSoul Home">
-        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
+        <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
+        <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
       </a>
 
       <!-- Desktop Navigation -->
@@ -104,7 +106,8 @@
   <!-- Mobile Offcanvas Menu -->
   <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header border-bottom" style="border-color: var(--border) !important;">
-      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160" style="max-width:160px;object-fit:contain;" loading="lazy" />
+      <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul Logo" height="42" width="160" style="max-width:160px;object-fit:contain;" loading="lazy" />
+      <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul Logo" height="42" width="160" style="max-width:160px;object-fit:contain;" loading="lazy" />
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"
               style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
     </div>
@@ -181,34 +184,54 @@
           <p class="mt-4">NumeroSoul was founded in 2014 by Master Numerologist <strong>Aanya Sharma</strong>, who discovered the Pythagorean system while studying ancient Vedic texts at the age of 22. What began as a personal journey of self-discovery grew into a thriving practice serving thousands of clients across 40+ countries.</p>
           <p>Our philosophy is simple: numerology is not prediction — it is <em>preparation</em>. It reveals the energetic signature you arrived with so you can make conscious choices aligned with your authentic self.</p>
           <p>Today, NumeroSoul operates with a team of 8 certified numerologists, a proprietary calculation engine, and a growing community of 50,000+ aligned souls worldwide.</p>
-          <div class="row g-4 mt-3 text-center text-lg-start">
-            <div class="col-12 col-sm-4">
-              <div class="fw-500" style="font-size:2rem;color:var(--primary);">10+</div>
-              <div class="caption">Years of Practice</div>
+          
+          <div class="row g-3 mt-4">
+            <div class="col-4">
+              <div class="p-3 border rounded text-center h-100" style="background: var(--bg-card); border-color: var(--border) !important;">
+                <div class="fw-600" style="font-size:2rem;color:var(--primary);">10+</div>
+                <div class="caption text-muted" style="font-size:0.8rem;">Years of Practice</div>
+              </div>
             </div>
-            <div class="col-12 col-sm-4">
-              <div class="fw-500" style="font-size:2rem;color:var(--secondary);">50K+</div>
-              <div class="caption">Clients Served</div>
+            <div class="col-4">
+              <div class="p-3 border rounded text-center h-100" style="background: var(--bg-card); border-color: var(--border) !important;">
+                <div class="fw-600" style="font-size:2rem;color:var(--secondary);">50K+</div>
+                <div class="caption text-muted" style="font-size:0.8rem;">Clients Served</div>
+              </div>
             </div>
-            <div class="col-12 col-sm-4">
-              <div class="fw-500" style="font-size:2rem;color:var(--primary);">40+</div>
-              <div class="caption">Countries Reached</div>
+            <div class="col-4">
+              <div class="p-3 border rounded text-center h-100" style="background: var(--bg-card); border-color: var(--border) !important;">
+                <div class="fw-600" style="font-size:2rem;color:var(--primary);">40+</div>
+                <div class="caption text-muted" style="font-size:0.8rem;">Countries Reached</div>
+              </div>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-6 reveal delay-1">
-          <div style="position:relative; overflow:hidden; border:1px solid var(--border); border-radius:var(--radius-card); padding:2rem 2rem 3rem; text-align:center; min-height: 480px; display:flex; flex-direction:column; justify-content:flex-end; align-items:center;">
-            <!-- Background Image -->
-            <img src="assets/images/founder.png" alt="Indian Numerology Wisdom" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;" />
-            <!-- Overlay -->
-            <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.3) 40%, rgba(15, 23, 42, 0.95) 90%); z-index:1;"></div>
+          <div class="position-relative">
+            <!-- Decorative Backing -->
+            <div style="position:absolute; top:-15px; left:-15px; right:15px; bottom:15px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 24px; opacity: 0.15; z-index: 0;"></div>
             
-            <!-- Content -->
-            <div style="position:relative; z-index:2; max-width: 500px;">
-              <blockquote style="font-size:1.35rem; font-weight:500; font-style:italic; color:#ffffff; margin:0; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">
-                "Numbers are the universal language offered by the deity to humans as confirmation of the truth."
-              </blockquote>
-              <cite style="display:block; margin-top:1.5rem; font-size:1rem; color:var(--gold, #F59E0B); font-weight:600; letter-spacing: 0.5px;">— St. Augustine of Hippo</cite>
+            <!-- Main Content Card -->
+            <div style="position:relative; z-index:1; border:1px solid var(--border); border-radius:24px; overflow:hidden; background:var(--bg-card); box-shadow:var(--shadow-lg); transition: transform 0.3s ease;"
+                 onmouseover="this.style.transform='translateY(-5px)'"
+                 onmouseout="this.style.transform='translateY(0)'">
+              <!-- Portrait Image -->
+              <div style="height: 380px; overflow: hidden; position: relative;">
+                <img src="assets/images/founder.png" alt="Aanya Sharma, Founder of NumeroSoul" style="width:100%; height:100%; object-fit:cover;" />
+                <div style="position:absolute; bottom:0; left:0; width:100%; height:50%; background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);"></div>
+              </div>
+              <!-- Quote Section -->
+              <div style="padding: 2.5rem 2rem; position: relative; background: var(--bg-card);">
+                <!-- Giant quote mark SVG -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" style="position:absolute; top: -20px; right: 2rem; background: var(--bg-card); border-radius: 50%; padding: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid var(--border);" aria-hidden="true">
+                  <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h3c0 4-2 6-4 6v1zm11 0c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v4c0 1.25.75 2 2 2h3c0 4-2 6-4 6v1z"/>
+                </svg>
+                <blockquote style="font-size:1.15rem; font-weight:450; font-style:italic; color:var(--text); margin:0; line-height: 1.6;">
+                  "Numbers are the universal language offered by the deity to humans as confirmation of the truth."
+                </blockquote>
+                <cite style="display:block; margin-top:1rem; font-size:0.9rem; color:var(--secondary); font-weight:600; letter-spacing: 0.5px; font-style: normal;">— St. Augustine of Hippo</cite>
+              </div>
             </div>
           </div>
         </div>
@@ -337,7 +360,8 @@
         <!-- Brand Column -->
         <div class="col-lg-4">
           <div class="footer-logo mb-3">
-            <img src="assets/images/logo.svg" alt="NumeroSoul Logo" width="180" height="50" loading="lazy" />
+            <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul Logo" width="180" height="50" fetchpriority="high" />
+            <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul Logo" width="180" height="50" fetchpriority="high" />
           </div>
           <p class="footer-brief">
             Unlocking the ancient wisdom of numbers to guide modern souls toward purpose, clarity, and cosmic alignment.

@@ -405,12 +405,48 @@ p {
   object-fit: contain;
 }
 
+/* Theme-dependent logo visibility */
+.logo-light {
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-dark {
+  display: none;
+  margin: 0 auto;
+}
+
+[data-theme="dark"] .logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .logo-dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-light {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .logo-dark {
+    display: block;
+  }
+}
+
+
+.desktop-nav {
+  gap: 1.25rem !important;
+  /* Increase gap between menu items */
+}
+
 .nav-link-custom {
   font-family: var(--font);
   font-weight: 480;
   font-size: 0.97rem;
   color: var(--text) !important;
-  padding: 0.4rem 0.9rem !important;
+  padding: 0.45rem 1.1rem !important;
+  /* Increased padding */
   border-radius: 8px;
   transition: all var(--transition);
   position: relative;
@@ -849,22 +885,34 @@ p {
   padding-bottom: 60px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.75)), url('../images/hero_bg.png') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.8), rgba(15, 23, 42, 0.85)), url('../images/hero_bg.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   min-height: 100vh;
 }
 
 .bg-services {
-  background: linear-gradient(rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.75)), url('../images/bg_services.png') center/cover no-repeat !important;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(88, 28, 135, 0.65)), url('../images/bg_services.png') center/cover no-repeat !important;
+}
+
+.bg-service-details {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(88, 28, 135, 0.65)), url('../images/bg_service_details.png') center/cover no-repeat !important;
 }
 
 .bg-about {
-  background: linear-gradient(rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.75)), url('../images/bg_about.png') center/cover no-repeat !important;
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.75), rgba(245, 158, 11, 0.25)), url('../images/bg_about.png') center/cover no-repeat !important;
+}
+
+.bg-blog {
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.75), rgba(245, 158, 11, 0.25)), url('../images/bg_blog.png') center/cover no-repeat !important;
+}
+
+.bg-gallery {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(6, 182, 212, 0.25)), url('../images/bg_gallery.png') center/cover no-repeat !important;
 }
 
 .bg-contact {
-  background: linear-gradient(rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.75)), url('../images/bg_contact.png') center/cover no-repeat !important;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(6, 182, 212, 0.25)), url('../images/bg_contact.png') center/cover no-repeat !important;
 }
 
 .page-hero-bg-orb {
@@ -955,35 +1003,72 @@ p {
 
 /* Card icon */
 .card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin: 0 auto 1.1rem auto;
+  margin: 0 auto 1.5rem auto;
   flex-shrink: 0;
+  position: relative;
+  transition: all var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-.card-icon i {
-  color: inherit;
+.card-icon svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-custom:hover .card-icon {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.card-custom:hover .card-icon svg {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .card-icon-purple {
-  background: rgba(139, 92, 246, 0.10);
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.2);
   color: var(--primary);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.12);
+}
+
+.card-icon-purple::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .card-icon-gold {
-  background: rgba(245, 158, 11, 0.10);
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.25);
   color: var(--secondary);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
 }
 
-.card-icon-cyan {
-  /* Cyan is kept only as a visual accent, not a brand color */
-  background: rgba(139, 92, 246, 0.07);
-  color: var(--primary);
+.card-icon-gold::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--secondary), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .card-title-custom {

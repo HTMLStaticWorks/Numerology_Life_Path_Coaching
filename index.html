@@ -28,7 +28,7 @@
 
   <title>NumeroSoul — Numerology &amp; Life Path Coaching</title>
   <link rel="canonical" href="https://numerosoul.com/" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="alternate icon" href="assets/images/favicon.ico" />
 
   <!-- Google Fonts: Outfit -->
@@ -86,8 +86,8 @@
 
       <!-- Logo -->
       <a href="index.html" class="navbar-brand p-0 me-4" aria-label="NumeroSoul Home">
-        <img src="assets/images/logo.svg" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50"
-          fetchpriority="high" />
+        <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
+        <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul — Numerology and Life Path Coaching" width="180" height="50" fetchpriority="high" />
       </a>
 
       <!-- Desktop Navigation -->
@@ -127,7 +127,9 @@
   <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu"
     aria-labelledby="mobileMenuLabel">
     <div class="offcanvas-header border-bottom" style="border-color: var(--border) !important;">
-      <img src="assets/images/logo.svg" alt="NumeroSoul Logo" height="42" width="160"
+      <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul Logo" height="42" width="160"
+        style="max-width:160px;object-fit:contain;" loading="lazy" />
+      <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul Logo" height="42" width="160"
         style="max-width:160px;object-fit:contain;" loading="lazy" />
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"
         style="filter: var(--bs-btn-close-white-filter, none); opacity: 0.7;"></button>
@@ -345,7 +347,18 @@
         <div class="col-md-6 col-lg-4 reveal">
           <div class="card-custom h-100">
             <div class="card-icon card-icon-purple">
-              <i class="bi bi-infinity"></i>
+              <!-- Custom Cosmic Infinity SVG -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 12c-2.9-3.9-6.3-5-8.5-5A4.5 4.5 0 0 0 3.5 16c2.2 0 5.6-1.1 8.5-5zm0 0c2.9 3.9 6.3 5 8.5 5a4.5 4.5 0 0 0 0-9c-2.2 0-5.6 1.1-8.5 5z" fill="url(#purpleGrad)" opacity="0.85" stroke="none"/>
+                <path d="M12 12c-2.9-3.9-6.3-5-8.5-5A4.5 4.5 0 0 0 3.5 16c2.2 0 5.6-1.1 8.5-5zm0 0c2.9 3.9 6.3 5 8.5 5a4.5 4.5 0 0 0 0-9c-2.2 0-5.6 1.1-8.5 5z"/>
+                <circle cx="12" cy="12" r="1.5" fill="var(--text)" stroke="none"/>
+                <defs>
+                  <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--primary)" />
+                    <stop offset="100%" stop-color="var(--primary-light)" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
             <h4 class="card-title-custom">Life Path Number</h4>
             <p class="card-text-custom">Your most significant number, derived from your birthdate. It describes your
@@ -357,7 +370,18 @@
         <div class="col-md-6 col-lg-4 reveal delay-1">
           <div class="card-custom h-100">
             <div class="card-icon card-icon-gold">
-              <i class="bi bi-heart-pulse"></i>
+              <!-- Sacred Heart SVG -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="url(#goldGrad)" opacity="0.85" stroke="none"/>
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                <line x1="12" y1="5" x2="12" y2="19" stroke="var(--bg-card)" stroke-width="1.5" opacity="0.6"/>
+                <defs>
+                  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--secondary)" />
+                    <stop offset="100%" stop-color="var(--secondary-light)" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
             <h4 class="card-title-custom">Soul Urge Number</h4>
             <p class="card-text-custom">Derived from the vowels in your name, the Soul Urge reveals your innermost
@@ -368,8 +392,14 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-2">
           <div class="card-custom h-100">
-            <div class="card-icon card-icon-cyan">
-              <i class="bi bi-person-badge"></i>
+            <div class="card-icon card-icon-purple">
+              <!-- Mystical Mask/User Profile SVG -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" opacity="0.15" fill="var(--primary)" stroke="none"/>
+                <path d="M18 21a6 6 0 0 0-12 0" />
+                <circle cx="12" cy="10" r="4" fill="url(#purpleGrad)" stroke="none"/>
+                <circle cx="12" cy="10" r="4" />
+              </svg>
             </div>
             <h4 class="card-title-custom">Personality Number</h4>
             <p class="card-text-custom">Computed from consonants in your name, this number reveals the mask you show the
@@ -381,7 +411,15 @@
         <div class="col-md-6 col-lg-4 reveal delay-3">
           <div class="card-custom h-100">
             <div class="card-icon card-icon-purple">
-              <i class="bi bi-calendar3"></i>
+              <!-- Astrolabe/Cycle Calendar SVG -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" fill="url(#purpleGrad)" opacity="0.2" stroke="none"/>
+                <circle cx="12" cy="12" r="6" />
+                <line x1="12" y1="2" x2="12" y2="22" opacity="0.3"/>
+                <line x1="2" y1="12" x2="22" y2="12" opacity="0.3"/>
+                <path d="M12 12l4.5-4.5" stroke="var(--secondary)" stroke-width="2.5"/>
+              </svg>
             </div>
             <h4 class="card-title-custom">Personal Year Cycle</h4>
             <p class="card-text-custom">Numerology operates in 9-year cycles. Your Personal Year number pinpoints the
@@ -393,7 +431,13 @@
         <div class="col-md-6 col-lg-4 reveal delay-4">
           <div class="card-custom h-100">
             <div class="card-icon card-icon-gold">
-              <i class="bi bi-lightning-charge"></i>
+              <!-- Master Glyph/Double Spark SVG -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9" fill="url(#goldGrad)" opacity="0.85" stroke="none"/>
+                <polygon points="12 2 16 9 23 12 16 15 12 22 8 15 1 12 8 9"/>
+                <line x1="12" y1="2" x2="12" y2="22" stroke="var(--bg-card)" stroke-width="1" opacity="0.3"/>
+                <line x1="2" y1="12" x2="22" y2="12" stroke="var(--bg-card)" stroke-width="1" opacity="0.3"/>
+              </svg>
             </div>
             <h4 class="card-title-custom">Master Numbers</h4>
             <p class="card-text-custom">11, 22, and 33 are the Master Numbers — carriers of extraordinary spiritual
@@ -404,8 +448,15 @@
 
         <div class="col-md-6 col-lg-4 reveal delay-5">
           <div class="card-custom h-100">
-            <div class="card-icon card-icon-cyan">
-              <i class="bi bi-compass"></i>
+            <div class="card-icon card-icon-gold">
+              <!-- Detailed Windrose Compass SVG -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="12 2 15 12 12 15 9 12" fill="url(#goldGrad)" opacity="0.85" stroke="none"/>
+                <polygon points="12 2 15 12 12 15 9 12"/>
+                <polygon points="12 22 15 12 12 9 9 12" />
+                <circle cx="12" cy="12" r="2" fill="var(--bg-card)" stroke="none"/>
+              </svg>
             </div>
             <h4 class="card-title-custom">Destiny Number</h4>
             <p class="card-text-custom">Also called the Expression Number, it is calculated from your full birth name
@@ -984,7 +1035,8 @@
         <!-- Brand Column -->
         <div class="col-lg-4">
           <div class="footer-logo mb-3">
-            <img src="assets/images/logo.svg" alt="NumeroSoul Logo" width="180" height="50" fetchpriority="high" />
+            <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul Logo" width="180" height="50" fetchpriority="high" />
+            <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul Logo" width="180" height="50" fetchpriority="high" />
           </div>
           <p class="footer-brief">
             Unlocking the ancient wisdom of numbers to guide modern souls toward purpose, clarity, and cosmic alignment.

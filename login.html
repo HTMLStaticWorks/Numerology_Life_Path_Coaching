@@ -23,13 +23,14 @@
 
   <title>Login - NumeroSoul</title>
   <link rel="canonical" href="https://numerosoul.com/login.html" />
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="alternate icon" href="assets/images/favicon.ico" />
 
   <!-- Resource Hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="assets/images/logo.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="assets/images/logo_light.png" type="image/png" />
+  <link rel="preload" as="image" href="assets/images/logo_dark.png" type="image/png" />
   <link rel="preload" as="style" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;450;480;500;510;520;540;560;580&display=swap"
     rel="stylesheet" />
@@ -68,8 +69,10 @@
       </div>
       <div class="card-custom" style="max-width:450px;width:100%;">
         <div class="text-center mb-4">
-          <a href="index.html"><img src="assets/images/logo.svg" alt="NumeroSoul Logo" width="180" height="50"
-              class="mx-auto d-block mb-3"></a>
+          <a href="index.html" class="d-inline-block">
+            <img src="assets/images/logo_light.png" class="logo-light" alt="NumeroSoul Logo" width="180" height="50" loading="lazy" />
+            <img src="assets/images/logo_dark.png" class="logo-dark" alt="NumeroSoul Logo" width="180" height="50" loading="lazy" />
+          </a>
           <h4>Welcome Back</h4>
           <p class="text-muted small">Login to access your account.</p>
         </div>
