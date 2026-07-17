@@ -378,6 +378,81 @@ p {
   border-color: rgba(6, 182, 212, 0.25);
 }
 
+/* Hero section badge overrides for high contrast and readability */
+#hero .section-badge,
+.page-hero .section-badge,
+#home2-hero .section-badge {
+  background: rgba(139, 92, 246, 0.28);
+  color: #F3E8FF;
+  border-color: rgba(167, 139, 250, 0.6);
+  font-weight: 560;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hero section outline button overrides for high contrast and readability */
+.page-hero .btn-outline-primary-custom,
+#hero .btn-outline-primary-custom,
+#home2-hero .btn-outline-primary-custom {
+  color: #F3E8FF !important;
+  border-color: rgba(167, 139, 250, 0.6) !important;
+  background: rgba(139, 92, 246, 0.15) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.page-hero .btn-outline-primary-custom:hover,
+#hero .btn-outline-primary-custom:hover,
+#home2-hero .btn-outline-primary-custom:hover {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.30);
+}
+
+/* Hero section inline link contrast improvements */
+.page-hero a:not(.btn-outline-primary-custom):not(.btn-primary-custom):not(.footer-social-link),
+#hero a:not(.btn-outline-primary-custom):not(.btn-primary-custom):not(.footer-social-link) {
+  color: #C084FC !important;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.page-hero a:not(.btn-outline-primary-custom):not(.btn-primary-custom):not(.footer-social-link):hover,
+#hero a:not(.btn-outline-primary-custom):not(.btn-primary-custom):not(.footer-social-link):hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* Hero section search form control input contrast */
+.page-hero .form-control,
+#hero .form-control {
+  border-color: rgba(167, 139, 250, 0.5) !important;
+  background: rgba(26, 26, 30, 0.75) !important;
+}
+
+/* Contact page hero info card overlay styles */
+.contact-hero-card {
+  background: rgba(26, 26, 30, 0.7) !important;
+  border: 1.5px solid rgba(167, 139, 250, 0.5) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Popular search links styling in Blog Hero section */
+.hero-popular-tags {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+.hero-popular-tags a {
+  color: #C084FC !important;
+  font-weight: 520 !important;
+  transition: color var(--transition);
+}
+.hero-popular-tags a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+
+
 /* ---------- 6. Navbar ---------- */
 #mainNav {
   position: fixed !important;
@@ -1071,6 +1146,27 @@ p {
   opacity: 0.5;
 }
 
+.card-icon-cyan {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.25);
+  color: var(--cyan);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.12);
+}
+
+.card-icon-cyan::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--cyan), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .card-title-custom {
   font-weight: 520;
   font-size: 1.15rem;
@@ -1422,6 +1518,7 @@ p {
   width: auto;
   max-width: 180px;
   object-fit: contain;
+  margin: 0 !important;
 }
 
 .footer-brief {
@@ -3054,4 +3151,20 @@ to {
 
 .num-badge {
   padding-left: 10px;
+}
+
+.password-toggle {
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+  transition: opacity 0.28s var(--transition), color 0.28s var(--transition);
+  background: transparent !important;
+  border: none !important;
+}
+
+.password-toggle:hover,
+.password-toggle:focus {
+  color: var(--primary) !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
