@@ -515,6 +515,20 @@ p {
   /* Increase gap between menu items */
 }
 
+@media (min-width: 992px) {
+  .desktop-nav {
+    flex-grow: 1 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .desktop-nav li:first-child {
+    margin-left: auto !important;
+  }
+  .desktop-nav li:last-child {
+    margin-right: auto !important;
+  }
+}
+
 .nav-link-custom {
   font-family: var(--font);
   font-weight: 480;
@@ -3167,4 +3181,77 @@ to {
   opacity: 1 !important;
   background: transparent !important;
   box-shadow: none !important;
+}
+
+/* Ensure cards and blocks inside permanently dark sections keep light text and dark backgrounds in light mode */
+#hero,
+.page-hero,
+#home2-hero,
+.cta-section,
+.auth-page-wrapper {
+  --text: #F0EFFF !important;
+  --text-muted: #9898B0 !important;
+  --bg-card: rgba(26, 26, 30, 0.65) !important;
+  --surface: #2A2A30 !important;
+  --border: rgba(139, 92, 246, 0.3) !important;
+  --glass: rgba(26, 26, 30, 0.65) !important;
+  --glass-border: rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Specific elements inside these dark sections */
+#hero .card-custom,
+.page-hero .card-custom,
+#home2-hero .card-custom,
+.cta-section .card-custom,
+.auth-page-wrapper .card-custom,
+#hero .report-card,
+.page-hero .report-card,
+#home2-hero .report-card,
+.cta-section .report-card,
+#hero .testimonial-card,
+.page-hero .testimonial-card,
+#home2-hero .testimonial-card,
+.cta-section .testimonial-card,
+#hero .pricing-card,
+.page-hero .pricing-card,
+#home2-hero .pricing-card,
+.cta-section .pricing-card,
+#hero .blog-card,
+.page-hero .blog-card,
+#home2-hero .blog-card,
+.cta-section .blog-card {
+  background: rgba(26, 26, 30, 0.65) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  color: #F0EFFF !important;
+}
+
+#hero .card-custom .card-title-custom,
+.page-hero .card-custom .card-title-custom,
+#home2-hero .card-custom .card-title-custom,
+.cta-section .card-custom .card-title-custom,
+.auth-page-wrapper .card-custom .card-title-custom,
+#hero .card-custom h1, #hero .card-custom h2, #hero .card-custom h3, #hero .card-custom h4, #hero .card-custom h5, #hero .card-custom h6,
+.page-hero .card-custom h1, .page-hero .card-custom h2, .page-hero .card-custom h3, .page-hero .card-custom h4, .page-hero .card-custom h5, .page-hero .card-custom h6,
+#home2-hero .card-custom h1, #home2-hero .card-custom h2, #home2-hero .card-custom h3, #home2-hero .card-custom h4, #home2-hero .card-custom h5, #home2-hero .card-custom h6,
+.cta-section .card-custom h1, .cta-section .card-custom h2, .cta-section .card-custom h3, .cta-section .card-custom h4, .cta-section .card-custom h5, .cta-section .card-custom h6,
+.auth-page-wrapper .card-custom h1, .auth-page-wrapper .card-custom h2, .auth-page-wrapper .card-custom h3, .auth-page-wrapper .card-custom h4, .auth-page-wrapper .card-custom h5, .auth-page-wrapper .card-custom h6 {
+  color: #ffffff !important;
+}
+
+#hero .card-custom .card-text-custom,
+.page-hero .card-custom .card-text-custom,
+#home2-hero .card-custom .card-text-custom,
+.cta-section .card-custom .card-text-custom,
+.auth-page-wrapper .card-custom .card-text-custom,
+#hero .card-custom p,
+.page-hero .card-custom p,
+#home2-hero .card-custom p,
+.cta-section .card-custom p,
+.auth-page-wrapper .card-custom p,
+#hero .card-custom .text-muted,
+.page-hero .card-custom .text-muted,
+#home2-hero .card-custom .text-muted,
+.cta-section .card-custom .text-muted,
+.auth-page-wrapper .card-custom .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
